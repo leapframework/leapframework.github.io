@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css"
+	media="screen">
+<link rel="stylesheet" type="text/css"
+	href="stylesheets/github-light.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylesheets/print.css"
+	media="print">
+
+<!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<title>leap开发环境搭建指引</title>
+</head>
+
+<body>
+	<header>
+		<div class="inner">
+			<h1>leap framework</h1>
+			<h2></h2>
+			<a href="https://github.com/leapframework/framework" class="button"><small>leap源码</small> Github</a>
+		</div>
+	</header>
+
+	<div id="content-wrapper">
+		<div class="inner clearfix">
+			<section id="main-content">
+			四步让你快速搭建leap的开发环境
+				<h3>
+					<a id="welcome-to-github-pages" class="anchor"
+						href="#welcome-to-github-pages" aria-hidden="true"><span
+						class="octicon octicon-link"></span></a>1. 创建空工程
+				</h3>
+
+				<div>
+					<img alt="新建工程" src="../images/new_project1.png">
+					<img alt="创建简单的maven工程" src="../images/new_project2.png">
+					<img alt="输入groupid和artifactid" src="../images/new_project3.png">
+				</div>
+
+				<h3>
+					<a id="designer-templates" class="anchor"
+						href="#designer-templates" aria-hidden="true"><span
+						class="octicon octicon-link"></span></a>
+					2. 添加leap框架的依赖
+				</h3>
+				
+				<div>
+					在<code>pom.xml</code>中添加如下依赖:
+					<div class="codehilite"><pre><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.leapframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>leap-fw<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.1.0-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;type&gt;</span>pom<span class="nt">&lt;/type&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></div>
+				</div>
+					
+				<h3>
+					<a id="creating-pages-manually" class="anchor"
+						href="#creating-pages-manually" aria-hidden="true"><span
+						class="octicon octicon-link"></span></a>3. 配置<code>web.xml</code>
+				</h3>
+				<div>
+					在<code>main/webapp/WEB-INF</code>目录下(没有该目录的话手动创建即可)创建<code>web.xml</code>文件:
+					<div class="codehilite"><pre><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;web-app</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
+         <span class="na">xmlns=</span><span class="s">"http://java.sun.com/xml/ns/javaee"</span>
+         <span class="na">xsi:schemaLocation=</span><span class="s">"http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"</span>
+         <span class="na">version=</span><span class="s">"3.0"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;filter&gt;</span>
+        <span class="nt">&lt;filter-name&gt;</span>app-filter<span class="nt">&lt;/filter-name&gt;</span>
+        <span class="nt">&lt;filter-class&gt;</span>leap.web.AppFilter<span class="nt">&lt;/filter-class&gt;</span>
+    <span class="nt">&lt;/filter&gt;</span>
+    <span class="nt">&lt;filter-mapping&gt;</span>
+        <span class="nt">&lt;filter-name&gt;</span>app-filter<span class="nt">&lt;/filter-name&gt;</span>
+        <span class="nt">&lt;url-pattern&gt;</span>/*<span class="nt">&lt;/url-pattern&gt;</span>
+    <span class="nt">&lt;/filter-mapping&gt;</span>
+<span class="nt">&lt;/web-app&gt;</span>
+</pre></div>
+				</div>
+				<h3>
+					<a id="authors-and-contributors" class="anchor"
+						href="#authors-and-contributors" aria-hidden="true"><span
+						class="octicon octicon-link"></span></a>4. 创建控制器
+				</h3>
+
+				<div>
+				在包<code>app.controller</code>下(没有这个包则自己创建,注意包名不能改变)<code>HomeController.java</code>类.
+				<br />
+				<img alt="工程结构" src="../images/new_project4.png">
+				<br />
+				代码如下:
+				<div class="codehilite"><pre><span class="kn">package</span> <span class="nn">app.controller</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">leap.web.Contents</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">leap.web.Results</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">HomeController</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">index</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">Results</span><span class="o">.</span><span class="na">render</span><span class="o">(</span><span class="n">Contents</span><span class="o">.</span><span class="na">text</span><span class="o">(</span><span class="s">"hello leap!"</span><span class="o">));</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+				</div>
+
+				<h3>
+					<a id="welcome-to-github-pages" class="anchor"
+						href="#welcome-to-github-pages" aria-hidden="true"><span
+						class="octicon octicon-link"></span></a>环境搭建完成
+				</h3>
+
+				<div>
+					将应用部署到web服务器(如:tomcat),访应用根目录即可看到:
+					<br />
+					<img alt="访问应用" src="../images/new_project5.png">
+					<br />
+					说明我们的环境搭建成功!
+				</div>
+			</section>
+
+			<aside id="sidebar">
+				<p>
+					<a href="../index.html">首页</a>
+				</p>
+				<p>
+					<a href="../doc/index.html">指引文档</a>
+				</p>
+				<p>
+					联系我们:<br/><br/>
+					<a style="cursor: pointer;">penghj@bingosoft.net</a><br/>
+				</p>
+			</aside>
+		</div>
+	</div>
+</body>
+</html>
