@@ -3,17 +3,15 @@
 <head>
 <meta charset='utf-8'>
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="viewport"
-	content="width=device-width， initial-scale=1， maximum-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Architects+Daughter'
-	rel='stylesheet' type='text/css'>
-<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css"
-	media="screen">
-<link rel="stylesheet" type="text/css"
-	href="stylesheets/github-light.css" media="screen">
-<link rel="stylesheet" type="text/css" href="stylesheets/print.css"
-	media="print">
-
+<meta name="viewport" content="width=device-width， initial-scale=1， maximum-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+<link rel="stylesheet" href="stylesheets/bootstrap.css">	
+<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="stylesheets/dessert.css" type="text/css" />  
+<script type="text/javascript" language="javascript" src="javascripts/prettify.js"></script>
 <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -21,9 +19,9 @@
 <title>leapframework</title>
 </head>
 
-<body>
+<body onload="prettyPrint()">
 	<header>
-		<div class="inner">
+		<div class="inner container">
 			<h1>leap framework</h1>
 			<h2></h2>
 			<a href="https://github.com/leapframework/framework" class="button"><small>leap源码</small>
@@ -31,13 +29,13 @@
 		</div>
 	</header>
 
-	<div id="content-wrapper">
-		<div class="inner clearfix">
-			<section id="main-content">
+	<div  class=" container con" >
+		<div class="clearfix row">
+			<section  class="col-xs-9 main-content ">
 				<h3>
 					<a id="welcome-to-github-pages" class="anchor"
 						href="#welcome-to-github-pages" aria-hidden="true"><span
-						class="octicon octicon-link"></span></a>欢迎来到leap的世界
+						class="octicon octicon-link"></span></a>leap框架是什么
 				</h3>
 
 				<p>leap是一个全栈式的web应用开发框架，高效便捷，上手简单，功能强大。</p>
@@ -48,15 +46,46 @@
 						class="octicon octicon-link"></span></a> 简单的依赖配置
 				</h3>
 				<div>
-				在一个新的maven工程中，只需要添加如下依赖:
+					在一个新的maven工程中，只需编辑pom.xml,添加资源库地址(如果已经在全局设置leap的资源库地址,这里也可以不配置)：<br /><br />
+		      			<div class="code">
+							<pre class="prettyprint" id="pre6">
+&lt;repositories&gt;
+    &lt;!-- leap快照资源库 --&gt;
+   &lt;repository&gt;
+        &lt;id&gt;leap-snapshots&lt;/id&gt;
+        &lt;url&gt;https://raw.githubusercontent.com/leapframework/repo/master/snapshots&lt;/url&gt;
+        &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;&lt;/enabled&gt;
+            &lt;updatePolicy&gt;always&lt;/updatePolicy&gt;
+            &lt;checksumPolicy&gt;warn&lt;/checksumPolicy&gt;
+        &lt;/snapshots&gt;
+   &lt;/repository&gt;
+    <!-- leap正式资源库 -->
+    &lt;repository&gt;
+        &lt;id&gt;leap-releases&lt;/id&gt;
+        &lt;url&gt;https://raw.githubusercontent.com/leapframework/repo/master/releases&lt;/url&gt;
+        &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+            &lt;updatePolicy&gt;never&lt;/updatePolicy&gt;
+            &lt;checksumPolicy&gt;warn&lt;/checksumPolicy&gt;
+        &lt;/releases&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;</pre>
+					
+				</div>					
+					
+					
+				添加如下依赖:<br />
 				
-				<div class="codehilite"><pre><span class="nt">&lt;dependency&gt;</span>
-    <span class="nt">&lt;groupId&gt;</span>org.leapframework<span class="nt">&lt;/groupId&gt;</span>
-    <span class="nt">&lt;artifactId&gt;</span>leap<span class="nt">&lt;/artifactId&gt;</span>
-    <span class="nt">&lt;version&gt;</span>${leap.version}<span class="nt">&lt;/version&gt;</span>
-    <span class="nt">&lt;type&gt;</span>pom<span class="nt">&lt;/type&gt;</span>
-<span class="nt">&lt;/dependency&gt;</span>
-</pre></div>
+   		 		<div class="code">
+					<pre class="prettyprint" id="pre1">
+&lt;dependency&gt;
+    &lt;groupId&gt;org.leapframework&lt;/groupId&gt;
+    &lt;artifactId&gt;leap-fw&lt;/artifactId&gt;
+    &lt;version&gt;0.1.0-SNAPSHOT&lt;/version&gt;
+    &lt;type>pom&lt;/type&gt;
+&lt;/dependency&gt;</pre>	   
+		    	</div>
 				
 				就会添加所有的依赖包，各个模块间的依赖和优化已经全部配置好了，添加即用。
 				</div>
@@ -68,8 +97,8 @@
 
 				<p>
 					在目前主流的开发框架中，spring mvc + mybatis + velocity (smv)是性能相当优秀的开发组合，
-					我们已经对比过leap和smv的全栈性能和各个模块单独的性能，对比结果如下: <img alt="性能对比"
-						src="images/throughput_chat.png">
+					我们已经对比过leap和smv的全栈性能和各个模块单独的性能，对比结果如下: </br> </br> 
+					<div class="throughput_chat"><img alt="性能对比" src="images/throughput_chat.png"></div class="throughput_chat">
 				</p>
 
 				<h3>
@@ -97,25 +126,35 @@
 				</p>
 
 				<ul>
-					<li>模板语法简单，提高开发效率;静态资源自动标识版本，不用再与客户端缓存做斗争</li>
+					<li>模板语法简单，提高开发效率；静态资源自动标识版本，不用再与客户端缓存做斗争</li>
 					<li>mvc智能简单的参数绑定，遵循约定大于配置的原则，代码简洁，极少冗余注解</li>
 					<li>基于ActiveRecord的ORM框架，零sql完成绝大多数数据操作</li>
 					<li>智能控制反转和依赖注入，无需关注对象生命周期</li>
-					<li>框架内置语言包，大量工具类使用随心所欲</li>
+					<li>框架内置语言包，大量工具类可供使用</li>
 				</ul>
 			</section>
 
 			<aside id="sidebar">
-				<p>
-					<a href="guid/guid.html">环境搭建</a>
-				</p>
-				<p>
-					<a href="doc/index.html">指引文档</a>
-				</p>
-				<p>
-					联系我们:<br />
-					<br /> <a style="cursor: pointer;">penghj@bingosoft.net</a><br />
-				</p>
+				<div class="sidebar_in">
+					<p class="closer">
+						<a href="index.html">首页</a>
+					</p>
+					<p class="closer">
+						<a href="guid/guide.html">环境搭建</a>
+					</p>
+					<p>
+						<a href="doc/index.html">指引文档</a>
+					</p>
+					<p>
+						联系我们:<br />
+						<a style="cursor: pointer;">penghj@bingosoft.net</a><br />
+					</p>
+					<p>
+						相关链接:<br />
+						<a href="./article/performance/performance.html" style="cursor: pointer;">leap 0.1.0-BETA性能测试</a><br />
+<!-- 						<a style="cursor: pointer;">leap 0.1.0-BETA版发布啦</a><br />					 -->
+					</p>									
+				</div>
 			</aside>
 		</div>
 	</div>

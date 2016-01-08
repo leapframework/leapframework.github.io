@@ -456,14 +456,23 @@ header {
 }
 
 header h1 {
-  width: 540px;
+  width: 650px;
+  height: 76px;
   margin-top: 0;
-  margin-bottom: 0.2em;
+  margin-bottom: 15px;
+  padding-left: 110px;  
+  background: url(../images/logo.png) no-repeat center left;
   font-size: 72px;
   font-weight: normal;
   line-height: 1;
   color: #fff;
   letter-spacing: -1px;
+}
+
+header h1 a{
+	display: block;
+	 width:100%;
+	 height: 100%;
 }
 
 header h2 {
@@ -479,7 +488,7 @@ header h2 {
 
 .inner {
   position: relative;
-  width: 940px;
+/*  width: 940px;*/
   margin: 0 auto;
 }
 
@@ -499,12 +508,16 @@ header h2 {
 
 aside#sidebar {
   float: right;
+ position: relative;
   width: 200px;
   min-height: 504px;
   padding-left: 20px;
-  font-size: 12px;
-  line-height: 1.3;
+  font-size: 14px;
+  line-height: 1.8;
   background: transparent url(../images/sidebar-bg.jpg) 0 0 no-repeat;
+}
+.sidebar_in{
+/*	position: fixed;*/
 }
 
 aside#sidebar p.repo-owner,
@@ -517,8 +530,8 @@ aside#sidebar p.repo-owner a {
 }
 
 a.button {
-  width: 134px;
-  height: 58px;
+width: 202px;
+height: 80px;
   padding-top: 22px;
   padding-left: 68px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
@@ -531,6 +544,7 @@ a.button small {
   font-size: 11px;
 }
 header a.button {
+   margin-right: 68px;
   position: absolute;
   top: 0;
   right: 0;
@@ -545,7 +559,11 @@ aside a.button {
   background: transparent url(../images/download-button.png) 0 0 no-repeat;
 }
 
-code, pre {
+
+pre{
+	margin-top:0;
+}
+/*code, pre {
   margin-bottom: 30px;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 13px;
@@ -570,7 +588,7 @@ pre code {
   color: #2879d0;
   background-color: #fff;
   border: none;
-}
+}*/
 
 ul, ol, dl {
   margin-bottom: 20px;
@@ -611,7 +629,7 @@ form {
 
 /* GENERAL ELEMENT TYPE STYLES */
 
-#main-content h1 {
+.main-content h1 {
   margin-top: 0;
   margin-bottom: 0;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
@@ -622,14 +640,14 @@ form {
   letter-spacing: -1px;
 }
 
-#main-content h1:before {
+.main-content h1:before {
   padding-right: 0.3em;
   margin-left: -0.9em;
   color: #9ddcff;
   content: "/";
 }
 
-#main-content h2 {
+.main-content h2 {
   margin-bottom: 8px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 22px;
@@ -637,15 +655,15 @@ form {
   color: #474747;
   text-indent: 4px;
 }
-#main-content h2:before {
+.main-content h2:before {
   padding-right: 0.3em;
   margin-left: -1.5em;
-  content: "//";
+  content: "///";
   color: #9ddcff;
 }
 
-#main-content h3 {
-  margin-top: 24px;
+.main-content h3 {
+  margin-top: 40px;
   margin-bottom: 8px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 18px;
@@ -654,14 +672,14 @@ form {
   text-indent: 3px;
 }
 
-#main-content h3:before {
+.main-content h3:before {
   padding-right: 0.3em;
   margin-left: -2em;
   content: "///";
-  color: #9ddcff;
+  color: #327ace;
 }
 
-#main-content h4 {
+.main-content h4 {
   margin-bottom: 8px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 15px;
@@ -670,14 +688,14 @@ form {
   text-indent: 3px;
 }
 
-h4:before {
+/*h4:before {
   padding-right: 0.3em;
   margin-left: -2.8em;
   content: "////";
   color: #9ddcff;
-}
+}*/
 
-#main-content h5 {
+.main-content h5 {
   margin-bottom: 8px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 14px;
@@ -691,7 +709,7 @@ h5:before {
   color: #9ddcff;
 }
 
-#main-content h6 {
+.main-content h6 {
   margin-bottom: 8px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: .8em;
@@ -705,12 +723,18 @@ h6:before {
   color: #9ddcff;
 }
 
-p {
-  margin-bottom: 20px;
+.sidebar_in p {
+  margin-bottom: 18px;
 }
-
-a {
+.sidebar_in p.closer{
+	margin-bottom: 4px;
+}
+.sidebar_in a {
   text-decoration: none;
+  color: #327ace;
+}
+.sidebar_in a:hover{
+	color:#1d60ad ;
 }
 
 p a {
@@ -879,3 +903,103 @@ footer a:hover {
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) { }
 
+
+
+
+/*代码块*/
+.code {
+  text-align: left;
+  position: relative;
+}
+ .code pre {
+  border: none;
+  border-radius: 4px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-topleft: 0px;
+}
+ .code:before {
+  content: "";
+  height: 25px;
+  /*width: 100%;*/
+  display: block;
+  background: -moz-linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaaaaa 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(5%, #cfcfcf), color-stop(100%, #aaaaaa));
+  background: -webkit-linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaaaaa 100%);
+  background: -o-linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaaaaa 100%);
+  background: -ms-linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaaaaa 100%);
+  background: linear-gradient(top, #f7f7f7 0%, #cfcfcf 5%, #aaaaaa 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#aaaaaa',GradientType=0 );
+  border: 1px solid #9c9c9c;
+  border-bottom-color: #111;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  -moz-border-radius-topleft: 7px;
+  -moz-border-radius-topright: 7px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 25px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  color: #444;
+}
+.code .prettyprint_btn,  .code .prettyprint_btn:active, .code .prettyprint_btn:focus {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  border-color: #e1e1e8;
+  background: white;
+  font-size: 12px;
+  outline: none;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  -moz-border-radius-topright: 0px;
+  -moz-border-radius-bottomleft: 0px;
+}
+.code .prettyprint_btn.btn_active,  .code .prettyprint_btn:active.btn_active,  .code .prettyprint_btn:focus.btn_active {
+  border-color: #327ace;
+  background-color: #327ace;
+  color: white;
+}
+.code .tip {
+  position: absolute;
+  right: -16px;
+  bottom: 42px;
+  font-size: 14px;
+  display: none;
+}
+.code .tip .tooltip-arrow {
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #69C768;
+}
+ .code .tip .tooltip-inner {
+  background-color: #69C768;
+}
+
+aside#sidebar{
+
+	float: left;
+}    
+.con {
+  margin-top: 44px;
+  padding-bottom: 100px;  
+}
+.container  .col-xs-9 {
+/*    padding-left: 100px;*/
+    margin-left: 70px;
+}
+/*.throughput_chat{
+	width: 100%;
+	max-width:865px ;
+	max-height: 495px;
+}
+
+.throughput_chat img{
+	width: 100%;
+	height: auto;
+}*/
+
+  
