@@ -27,9 +27,10 @@
                <p class="site-description">{{ site.description }}</p>
              </div>
              <nav>
-               <a href="{{ site.baseurl }}/">Blog</a>
-               <a href="{{ site.baseurl }}/about">About</a>
-               <a href="{{ site.baseurl }}/projects">Projects</a>
+               <a href="{{ site.baseurl }}/">首页</a>
+               <a href="https://{{ site.footer-links.gitbook }}.gitbooks.io/doc/content/" target="_blank">文档</a>
+               <a href="{{ site.baseurl }}/version">版本</a>
+			   <a href="{{ site.baseurl }}/blog">博客</a>
              </nav>
            </header>
          </div>
@@ -47,7 +48,7 @@
                                 <div class="ch-info-front ch-img-1"></div>
                                 <div class="ch-info-back">
                                     <h3>{{site.name}}</h3>
-                                    <p></br><a href="https://linkedin.com/in/{{ site.footer-links.linkedin }}">View on LinkedIn</a></p>
+                                    <p></br><a href="https://github.com/{{ site.footer-links.github }}">View on github</a></p>
                                 </div>	
                             </div>
                         </div>

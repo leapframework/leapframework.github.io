@@ -3,6 +3,8 @@
 /* MEYER RESET */
 /***************/
 
+@import "variables";
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,6 +47,24 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+	width:100%;
+	border-bottom: $border-size $border-type $border-color;
+	thead,tbody {
+		border:0;
+		tr {
+			border:0;
+			th {
+				font-weight: 900;
+				padding: 0px 0px 10px 10px;
+				border-bottom: $border-size $border-type $border-color;
+			}
+			td {
+				padding: 0px 5px 10px 0px;
+				text-align: right;
+			}
+		}
+		
+	}
 }
 
 *, *:before, *:after {
