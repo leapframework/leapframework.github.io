@@ -152,10 +152,19 @@ img {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .masthead {
+  padding: 20px 0;
+  border-bottom: 0px solid $lightGray;
+
+  @include mobile {
+    text-align: center;
+  }
+}
+
+.masthead-index {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
 

@@ -21,7 +21,7 @@
     <div class="intro-header">
         <div class="wrapper-masthead">
          <div class="container">
-           <header class="masthead clearfix">
+           <header class="masthead-index clearfix">
 		   <img src="/images/logo.png" class="site-info" style="margin-top: 10px;">
              <div class="site-info">
                <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
@@ -38,32 +38,28 @@
        </div>
        
         <div class="container">
-			<!--
-            <div class="space-small"></div>
+		
             <div class="centered">
               <ul class="ch-grid">
                 <li>
-                    <div class="ch-item ch-img-1">				
-                        <div class="ch-info-wrap">
-                            <div class="ch-info">
-                                <div class="ch-info-front ch-img-1"></div>
-                                <div class="ch-info-back">
-                                    <h3>{{site.name}}</h3>
-                                    <p></br><a href="https://github.com/{{ site.footer-links.github }}">View on github</a></p>
-                                </div>	
-                            </div>
-                        </div>
-                    </div>
+                    <a class="button button-success" href="{{ site.baseurl  }}/quickstart/">快速开始</a>
                 </li>
             </ul>
         </div>
-             <div class="space-medium"></div>
-			-->
+        
         </div>
     </div>
 
     <div id="main" role="main" class="container">
-      {{ content }}
+      <article class="page">
+
+		  <h1>{{ page.title }}</h1>
+
+		  <div class="entry">
+			{{ content }}
+		  </div>
+		</article>
+
     </div>
 
     <div class="wrapper-footer">

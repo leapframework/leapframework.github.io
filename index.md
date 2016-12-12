@@ -1,9 +1,9 @@
 ---
-layout: page
+layout: index
 title: 简介
 ---
 
-leap是一个轻量级的微服务api开发框架，可以方便快速开发微服务api，并且支持按照swagger标准生成api文档。
+leap是一个全栈式的web应用开发框架，高效便捷，上手简单，功能强大。
 
 ## 简单的依赖配置
 

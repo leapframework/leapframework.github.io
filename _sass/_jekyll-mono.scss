@@ -74,7 +74,14 @@ button.button-primary, {
     background-color: transparent;
     border-color: $mono-color; 
 }
-    
+ 
+.button.button-success,
+button.button-success, {
+    color: $white;
+    background-color: $green;
+    border-color: $border-color; 
+}
+ 
 .button.button-primary:hover,
 button.button-primary:hover,
 .button.button-primary:focus,
@@ -174,8 +181,9 @@ button.button-primary:focus {
 
 .ch-grid li {
 	width: 220px;
-	height: 220px;
-	display: inline-block;	
+    height: 100px;
+    display: inline-block;
+    line-height: 100px;	
 }
 
 .ch-item {
