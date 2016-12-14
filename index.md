@@ -71,3 +71,9 @@ leap是全栈统一风格设计，基于html注释的模板引擎，基于Active
 * 基于ActiveRecord的ORM框架，零sql完成绝大多数数据操作
 * 智能控制反转和依赖注入，无需关注对象生命周期
 * 框架内置语言包，大量工具类可供使用
+
+## API快速开发
+
+leap支持API快速开发，并且可以按照swagger标准自动生成文档，代码写完文档即可自动生成，并且可以直接导入swagger ui查看和测试。
+
+![api文档](/images/swagger.json.user.try.png)
