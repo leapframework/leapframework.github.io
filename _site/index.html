@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>简介 – Leap Framework – 全栈式的web应用开发框架</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="全栈式的web应用开发框架">
+    <meta property="og:description" content="全栈式的web应用开发框架" />
+    
+    <meta name="author" content="Leap Framework" />
+
+    
+    <meta property="og:title" content="简介" />
+    <meta property="twitter:title" content="简介" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="Leap Framework - 全栈式的web应用开发框架" href="/feed.xml" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  <body>
+    
+    <div class="intro-header">
+        <div class="wrapper-masthead">
+         <div class="container">
+           <header class="masthead-index clearfix">
+		   <img src="/images/logo.png" class="site-info" style="margin-top: 10px;">
+             <div class="site-info">
+               <h1 class="site-name"><a href="/">Leap Framework</a></h1>
+               <p class="site-description">全栈式的web应用开发框架</p>
+             </div>
+             <nav>
+   <a href="/">首页</a>
+   
+   <a href="https://leapframework.gitbooks.io/doc/content/" target="_blank">文档</a>
+   
+   <a href="/version">版本</a>
+   <a href="/blog">博客</a>
+ </nav>
+           </header>
+         </div>
+       </div>
+       
+        <div class="container">
+		
+            <div class="centered">
+              <ul class="ch-grid">
+                <li>
+                    <a class="button button-success" href="/quickstart/">快速开始</a>
+                </li>
+            </ul>
+        </div>
+        
+        </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="page">
+
+		  <h1>简介</h1>
+
+		  <div class="entry">
+			<p>leap是一个全栈式的web应用开发框架，高效便捷，上手简单，功能强大。</p>
+
+<h2 id="section">简单的依赖配置</h2>
+
+<p>在一个新的maven工程中，只需编辑pom.xml,添加资源库地址(如果已经在全局设置leap的资源库地址,这里也可以不配置)：</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;repositories&gt;</span>
+    <span class="c">&lt;!-- leap快照资源库 --&gt;</span>
+   <span class="nt">&lt;repository&gt;</span>
+        <span class="nt">&lt;id&gt;</span>leap-snapshots<span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;url&gt;</span>https://raw.githubusercontent.com/leapframework/repo/master/snapshots<span class="nt">&lt;/url&gt;</span>
+        <span class="nt">&lt;snapshots&gt;</span>
+            <span class="nt">&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;</span>
+            <span class="nt">&lt;updatePolicy&gt;</span>always<span class="nt">&lt;/updatePolicy&gt;</span>
+            <span class="nt">&lt;checksumPolicy&gt;</span>warn<span class="nt">&lt;/checksumPolicy&gt;</span>
+        <span class="nt">&lt;/snapshots&gt;</span>
+   <span class="nt">&lt;/repository&gt;</span>
+    
+    <span class="nt">&lt;repository&gt;</span>
+        <span class="nt">&lt;id&gt;</span>leap-releases<span class="nt">&lt;/id&gt;</span>
+        <span class="nt">&lt;url&gt;</span>https://raw.githubusercontent.com/leapframework/repo/master/releases<span class="nt">&lt;/url&gt;</span>
+        <span class="nt">&lt;releases&gt;</span>
+            <span class="nt">&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;</span>
+            <span class="nt">&lt;updatePolicy&gt;</span>never<span class="nt">&lt;/updatePolicy&gt;</span>
+            <span class="nt">&lt;checksumPolicy&gt;</span>warn<span class="nt">&lt;/checksumPolicy&gt;</span>
+        <span class="nt">&lt;/releases&gt;</span>
+    <span class="nt">&lt;/repository&gt;</span>
+<span class="nt">&lt;/repositories&gt;</span>
+</code></pre>
+</div>
+
+<p>添加如下依赖:</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.leapframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>leap<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>${leap.version}<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;type&gt;</span>pom<span class="nt">&lt;/type&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="section-1">优秀的运行性能</h2>
+
+<p>在目前主流的开发框架中，spring mvc + mybatis + velocity (smv)是性能相当优秀的开发组合， 我们已经对比过leap和smv的全栈性能和各个模块单独的性能，对比结果如下:</p>
+
+<p><img src="/images/throughput_chat.png" alt="性能对比" /></p>
+
+<h2 id="section-2">便捷的安全配置</h2>
+
+<p>登录校验，CSRF校验等安全校验功能，只需要一行代码便可启用和关闭，便捷轻松。</p>
+
+<ul>
+  <li>内置支持CSRF校验，一行代码启用CSRF校验</li>
+  <li>内置登录校验，一行代码启用登录校验，轻松实现用户身份认证</li>
+  <li>内置HTML5 CORS标准支持，简单注解实现跨域资源共享</li>
+  <li>模板引擎自动防XSS攻击，可以更加专注于业务逻辑</li>
+</ul>
+
+<h2 id="section-3">良好的开发体验</h2>
+
+<p>leap是全栈统一风格设计，基于html注释的模板引擎，基于ActiveRecord的ORM框架，高度智能的参数绑定，遵从约定大于配置的原则，代码简洁，使用轻松。</p>
+
+<ul>
+  <li>模板语法简单，提高开发效率；静态资源自动标识版本，不用再与客户端缓存做斗争</li>
+  <li>mvc智能简单的参数绑定，遵循约定大于配置的原则，代码简洁，极少冗余注解</li>
+  <li>基于ActiveRecord的ORM框架，零sql完成绝大多数数据操作</li>
+  <li>智能控制反转和依赖注入，无需关注对象生命周期</li>
+  <li>框架内置语言包，大量工具类可供使用</li>
+</ul>
+
+<h2 id="api">API快速开发</h2>
+
+<p>leap支持API快速开发，并且可以按照swagger标准自动生成文档，代码写完文档即可自动生成，并且可以直接导入swagger ui查看和测试。</p>
+
+<p><img src="/images/swagger.json.user.try.png" alt="api文档" /></p>
+
+		  </div>
+		</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+            <div class="svg-icon">
+          
+<a href="mailto:penghj@bingosoft.net"><i class="icon-envelope icon-2x"></i></a>
+
+
+<a href="https://github.com/leapframework/framework"><i class="icon-github icon-2x"></i></a>
+<a href="https://www.gitbook.com/@leapframework"><i class="icon-book icon-2x"></i></a>
+
+
+
+
+
+
+
+
+
+            </div>
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>leap性能测试 – Leap Framework – 全栈式的web应用开发框架</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="这是leap0.4.0b版本和其他java框架的简单性能测试比较。
+
+" />
+    <meta property="og:description" content="这是leap0.4.0b版本和其他java框架的简单性能测试比较。
+
+" />
+    
+    <meta name="author" content="Leap Framework" />
+
+    
+    <meta property="og:title" content="leap性能测试" />
+    <meta property="twitter:title" content="leap性能测试" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="Leap Framework - 全栈式的web应用开发框架" href="/feed.xml" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  <body>
+    
+    
+    <div class="intro-header">    
+      <div class="container">
+        <div class="post-heading">
+            <h1>leap性能测试</h1>
+            <span class="meta">作者：Kael 
+			<br/>
+			发布于 2016-12-19	
+			<br/>
+        </div>
+            
+      </div>
+    </div>
+    
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+ <div class="space-extra-small">
+ </div>
+
+  <div class="entry">
+    <p>这是leap0.4.0b版本和其他java框架的简单性能测试比较。</p>
+
+<p>本文针对leap的0.4.0b版本做一个简单的性能测试，参考github项目<a href="https://github.com/networknt/light-java-example/performance">light-java-example</a>，从这个项目fork了一个分支<a href="https://github.com/kael-aiur/light-java-example/tree/leap/performance">leap分支</a>，切换到leap分支之后把所有使用maven的项目在同一台机器使用<a href="https://github.com/wg/wrk">wrk</a>重新测试得到的结果。</p>
+
+<h2 id="section">测试结果</h2>
+
+<p>总的测试结果如下：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>框架</th>
+      <th>最大吞吐量（tps）</th>
+      <th>平均延迟</th>
+      <th>数据传输量</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>light-java</td>
+      <td>314598.20</td>
+      <td>3.50ms</td>
+      <td>31.80MB</td>
+    </tr>
+    <tr>
+      <td>leap</td>
+      <td>81595.97</td>
+      <td>17.33ms</td>
+      <td>12.53MB</td>
+    </tr>
+    <tr>
+      <td>spark</td>
+      <td>74712.77</td>
+      <td>18.25ms</td>
+      <td>12.47MB</td>
+    </tr>
+    <tr>
+      <td>ratpack</td>
+      <td>67327.07</td>
+      <td>18.17ms</td>
+      <td>5.84MB</td>
+    </tr>
+    <tr>
+      <td>jooby</td>
+      <td>43496.72</td>
+      <td>29.90ms</td>
+      <td>6.26MB</td>
+    </tr>
+    <tr>
+      <td>spring-boot-undertow</td>
+      <td>20908.40</td>
+      <td>55.77ms</td>
+      <td>3.03MB</td>
+    </tr>
+    <tr>
+      <td>wildfly-swarm</td>
+      <td>19053.41</td>
+      <td>76.74ms</td>
+      <td>2.51MB</td>
+    </tr>
+    <tr>
+      <td>spring-boot-tomcat</td>
+      <td>12454.02</td>
+      <td>99.19ms</td>
+      <td>1.50MB</td>
+    </tr>
+    <tr>
+      <td>Dropwizard</td>
+      <td>8904.86</td>
+      <td>258.15ms</td>
+      <td>1.16MB</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="section-1">测试数据</h2>
+
+<p>这里列出每个框架的测试结果具体方式和数据。为保证测试数据的准确性，每个框架的测试需要重复进行三到四次测试，取性能最好的一次以便得到框架的最高性能。</p>
+
+<h3 id="dropwizard">Dropwizard</h3>
+
+<p>使用如下指令运行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; cd dropwizard/
+$&gt; mvn clean package
+$&gt; java -jar target/dropwizard-simple.jar server
+</code></pre>
+</div>
+
+<p>运行如下测试：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; wrk -t4 -c128 -d30s http://localhost:8080 -s pipeline.lua --latency -- / 16 Running 30s test @ http://localhost:8080
+Running 30s test @ http://localhost:8080
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   258.15ms  209.04ms   1.29s    69.86%
+    Req/Sec     2.24k   593.62     4.74k    68.64%
+  Latency Distribution
+     50%  202.00ms
+     75%  378.36ms
+     90%  570.02ms
+     99%  862.24ms
+  267830 requests in 30.08s, 34.99MB read
+Requests/sec:   8904.86
+Transfer/sec:      1.16MB
+</code></pre>
+</div>
+
+<h3 id="jooby">jooby</h3>
+
+<p>使用如下指令运行:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; cd jooby/
+$&gt; mvn clean package
+$&gt; java -jar target/jooby-1.0-SNAPSHOT.jar
+</code></pre>
+</div>
+
+<p>运行如下指令测试：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; wrk -t4 -c128 -d30s http://localhost:8080 -s pipeline.lua --latency -- / 16 Running 30s test @ http://localhost:8080
+Running 30s test @ http://localhost:8080
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    29.90ms   18.98ms 202.59ms   66.04%
+    Req/Sec    10.93k     1.75k   17.50k    74.32%
+  Latency Distribution
+     50%   27.07ms
+     75%   42.05ms
+     90%   55.55ms
+     99%   82.73ms
+  1305712 requests in 30.02s, 188.03MB read
+Requests/sec:  43496.72
+Transfer/sec:      6.26MB
+</code></pre>
+</div>
+
+<h3 id="leap">leap</h3>
+
+<p>使用如下指令运行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; cd leapframework/
+$&gt; mvn clean jetty:run
+</code></pre>
+</div>
+
+<p>运行如下指令测试：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; wrk -t4 -c128 -d30s http://localhost:8080 -s pipeline.lua --latency -- / 16 Running 30s test @ http://localhost:8080
+Running 30s test @ http://localhost:8080
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.33ms   16.41ms 242.46ms   92.19%
+    Req/Sec    20.53k     2.27k   43.11k    73.60%
+  Latency Distribution
+     50%   13.99ms
+     75%   21.60ms
+     90%   30.78ms
+     99%   93.00ms
+  2456010 requests in 30.10s, 377.10MB read
+Requests/sec:  81595.97
+Transfer/sec:     12.53MB
+</code></pre>
+</div>
+
+<h3 id="light-java">light-java</h3>
+
+<p>使用如下指令运行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; cd light-java/
+$&gt; mvn clean package
+$&gt; java -jar target/swagger-light-java-1.0.0.jar
+</code></pre>
+</div>
+
+<p>运行如下指令测试：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; wrk -t4 -c128 -d30s http://localhost:8080 -s pipeline.lua --latency -- / 16 Running 30s test @ http://localhost:8080
+Running 30s test @ http://localhost:8080
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.50ms    2.03ms  47.78ms   66.37%
+    Req/Sec    79.16k     5.13k  124.80k    88.51%
+  Latency Distribution
+     50%    3.99ms
+     75%    5.55ms
+     90%    9.45ms
+     99%    0.00us
+  9469760 requests in 30.10s, 0.93GB read
+Requests/sec: 314598.20
+Transfer/sec:     31.80MB
+</code></pre>
+</div>
+
+<h3 id="ratpack">ratpack</h3>
+
+<p>使用如下指令运行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; cd ratpack/
+$&gt; mvn clean package
+$&gt; java -jar target/ratpack-0.0.1-SNAPSHOT.jar
+</code></pre>
+</div>
+
+<p>运行如下指令测试：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; wrk -t4 -c128 -d30s http://localhost:5050 -s pipeline.lua --latency -- / 16 Running 30s test @ http://localhost:5050
+Running 30s test @ http://localhost:5050
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.17ms   10.56ms  82.78ms   61.82%
+    Req/Sec    16.97k     2.03k   54.72k    79.91%
+  Latency Distribution
+     50%   18.09ms
+     75%   27.49ms
+     90%   36.83ms
+     99%    0.00us
+  2026541 requests in 30.10s, 175.87MB read
+Requests/sec:  67327.07
+Transfer/sec:      5.84MB
+</code></pre>
+</div>
+
+<h3 id="spark">spark</h3>
+
+<p>使用如下指令运行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; cd psark/
+$&gt; mvn clean package
+$&gt; java -jar target/spark-0.0.1-SNAPSHOT.jar 
+</code></pre>
+</div>
+
+<p>运行如下指令测试：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; wrk -t4 -c128 -d30s http://localhost:4567 -s pipeline.lua --latency -- / 16 Running 30s test @ http://localhost:4567
+Running 30s test @ http://localhost:4567
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.25ms   14.64ms 237.60ms   81.18%
+    Req/Sec    18.79k     1.60k   24.08k    70.95%
+  Latency Distribution
+     50%   15.22ms
+     75%   23.98ms
+     90%   34.66ms
+     99%   73.07ms
+  2244768 requests in 30.05s, 374.64MB read
+Requests/sec:  74712.77
+Transfer/sec:     12.47MB
+</code></pre>
+</div>
+
+<h3 id="spring-boot-tomcat">spring-boot-tomcat</h3>
+
+<p>使用如下指令运行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; cd spring-boot-tomcat/
+$&gt; mvn clean package
+$&gt; java -jar target/myproject-0.0.1-SNAPSHOT.jar
+</code></pre>
+</div>
+
+<p>运行如下指令测试：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; wrk -t4 -c128 -d30s http://localhost:8080 -s pipeline.lua --latency -- / 16 Running 30s test @ http://localhost:8080
+Running 30s test @ http://localhost:8080
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    99.19ms   66.36ms 532.93ms   68.79%
+    Req/Sec     3.14k   550.01     8.40k    72.96%
+  Latency Distribution
+     50%   86.77ms
+     75%  138.83ms
+     90%  191.70ms
+     99%  295.43ms
+  374620 requests in 30.08s, 45.08MB read
+Requests/sec:  12454.02
+Transfer/sec:      1.50MB
+</code></pre>
+</div>
+
+<h3 id="spring-boot-undertow">spring-boot-undertow</h3>
+
+<p>使用如下指令运行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; cd spring-boot-undertow/
+$&gt; mvn clean package
+$&gt; java -jar target/myproject-0.0.1-SNAPSHOT.jar
+</code></pre>
+</div>
+
+<p>运行如下指令测试：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; wrk -t4 -c128 -d30s http://localhost:8080 -s pipeline.lua --latency -- / 16 Running 30s test @ http://localhost:8080
+Running 30s test @ http://localhost:8080
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    55.77ms   31.15ms 453.70ms   63.99%
+    Req/Sec     5.27k     1.49k   10.08k    81.61%
+  Latency Distribution
+     50%   58.56ms
+     75%   83.09ms
+     90%  105.99ms
+     99%    0.00us
+  627984 requests in 30.04s, 91.03MB read
+Requests/sec:  20908.40
+Transfer/sec:      3.03MB
+</code></pre>
+</div>
+
+<h3 id="wildfly-swarm">wildfly-swarm</h3>
+
+<p>使用如下指令运行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; cd wildfly-swarm/
+$&gt; mvn clean package
+$&gt; java -jar target/demo-swarm.jar
+</code></pre>
+</div>
+
+<p>运行如下指令测试：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; wrk -t4 -c128 -d30s http://localhost:8080 -s pipeline.lua --latency -- / 16 Running 30s test @ http://localhost:8080
+Running 30s test @ http://localhost:8080
+  4 threads and 128 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    76.74ms   60.91ms 638.06ms   78.13%
+    Req/Sec     4.80k   674.76     7.32k    76.29%
+  Latency Distribution
+     50%   62.64ms
+     75%  100.79ms
+     90%  153.82ms
+     99%  296.78ms
+  573411 requests in 30.09s, 75.46MB read
+Requests/sec:  19053.41
+Transfer/sec:      2.51MB
+</code></pre>
+</div>
+
+  </div>
+  <hr/>
+	<ul>
+		<li><a href="/">首页</a></li>
+		<li><a href="/quickstart">快速开始</a></li>
+		<li><a href="/blog">博客</a></li>
+		<li>
+			
+		   <a href="https://leapframework.gitbooks.io/doc/content/" target="_blank">文档</a>
+		   
+		</li>
+	</ul>
+  
+</article>
+
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+            <div class="svg-icon">
+          
+<a href="mailto:penghj@bingosoft.net"><i class="icon-envelope icon-2x"></i></a>
+
+
+<a href="https://github.com/leapframework/framework"><i class="icon-github icon-2x"></i></a>
+<a href="https://www.gitbook.com/@leapframework"><i class="icon-book icon-2x"></i></a>
+
+
+
+
+
+
+
+
+
+            </div>
+        </footer>
+      </div>
+    </div>
+
+
+    
+
+  </body>
+</html>
