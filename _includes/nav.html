@@ -1,6 +1,6 @@
 <nav>
    <a href="{{ site.baseurl }}/">首页</a>
-   {% if jekyll.environment == "development" %}
+   {% if jekyll.environment != "local" %}
    <a href="https://{{ site.footer-links.gitbook }}.gitbooks.io/doc/content/" target="_blank">文档</a>
    {% else %}
    <a href="{{ site.baseurl }}/doc" target="_blank">文档</a>
