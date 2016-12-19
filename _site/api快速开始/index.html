@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>api快速开始 – Leap Framework – 全栈式的web应用开发框架</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="快速搭建api开发环境
+
+" />
+    <meta property="og:description" content="快速搭建api开发环境
+
+" />
+    
+    <meta name="author" content="Leap Framework" />
+
+    
+    <meta property="og:title" content="api快速开始" />
+    <meta property="twitter:title" content="api快速开始" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="alternate" type="application/rss+xml" title="Leap Framework - 全栈式的web应用开发框架" href="/feed.xml" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+  </head>
+
+  <body>
+    
+    
+    <div class="intro-header">    
+      <div class="container">
+        <div class="post-heading">
+            <h1>api快速开始</h1>
+            <span class="meta">作者：Kael 
+			<br/>
+			发布于 2016-12-12	
+			<br/>
+        </div>
+            
+      </div>
+    </div>
+    
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+ <div class="space-extra-small">
+ </div>
+
+  <div class="entry">
+    <p>快速搭建api开发环境</p>
+
+<h2 id="web">准备web环境</h2>
+
+<p>leap web api开发工程基于leap web工程搭建，在开始搭建web api工程之前，请先按照<a href="/web%E5%BA%94%E7%94%A8/">web工程快速开始</a>搭建web开发工程。</p>
+
+<p>最终搭建完成的web工程目录结构如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>demo/
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── leap
+    │   │       └── demo
+    │   │           ├── controller
+    │   │           │   └── HomeController.java
+    │   │           └── Global.java
+    │   ├── resources
+    │   │   └── conf
+    │   │       └── config.xml
+    │   └── webapp
+    │       ├── index.jsp
+    │       ├── static
+    │       └── WEB-INF
+    │           ├── views
+    │           │   └── index.html
+    │           └── web.xml
+    └── test
+        ├── java
+        └── resources
+</code></pre>
+</div>
+
+<h2 id="api">补充api配置和目录</h2>
+
+<p>我们先创建api专用包和api配置文件。</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; cd demo
+$&gt; mkdir src/main/java/leap/api/controller -p
+$&gt; echo &gt;&gt; src/main/resources/conf/apis.xml
+$&gt; echo &gt;&gt; src/main/java/leap/api/controller/ApiDemoController.java
+</code></pre>
+</div>
+
+<blockquote>
+  <p><strong>注意：</strong> 这里api配置的路径是leap的默认路径，不能改变，但是api专用包的包名是可以按照实际情况自己定义的。</p>
+</blockquote>
+
+<p>现在完整的目录结构如下：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>demo/
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── leap
+    │   │       ├── api
+    │   │       │   └── controller
+    │   │       │       └── ApiDemoController.java
+    │   │       └── demo
+    │   │           ├── controller
+    │   │           │   └── HomeController.java
+    │   │           └── Global.java
+    │   ├── resources
+    │   │   └── conf
+    │   │       ├── apis.xml
+    │   │       └── config.xml
+    │   └── webapp
+    │       ├── index.jsp
+    │       ├── static
+    │       └── WEB-INF
+    │           ├── views
+    │           │   └── index.html
+    │           └── web.xml
+    └── test
+        ├── java
+        └── resources
+</code></pre>
+</div>
+
+<h2 id="section">修改配置和添加代码</h2>
+
+<p>编辑src/main/resources/conf/apis.xml</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;apis</span> <span class="na">xmlns=</span><span class="s">"http://www.leapframework.org/schema/web/apis"</span><span class="nt">&gt;</span>
+        <span class="c">&lt;!--
+                name: api名称，必填
+                base-path: api的上下文根路径，非必填
+                base-package: api的扫描包路径，非必填
+        --&gt;</span>
+        <span class="nt">&lt;api</span> <span class="na">name=</span><span class="s">"demo-api"</span> <span class="na">base-path=</span><span class="s">"/demo-api"</span> <span class="na">base-package=</span><span class="s">"leap.api"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/apis&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>注意，这里我们说的api，指的是一组url组合的一个功能服务，而不是平时说的一个rest api接口。</strong></p>
+
+<blockquote>
+  <p>api的配置最好遵从如下规则：</p>
+
+  <ol>
+    <li>
+      <p><code class="highlighter-rouge">base-path</code>不要存在嵌套关系，如：最好不要出现<code class="highlighter-rouge">base-path="/"</code>和<code class="highlighter-rouge">base-path="/api1"</code>的两个api配置；</p>
+    </li>
+    <li>
+      <p><code class="highlighter-rouge">base-package</code>不能是<code class="highlighter-rouge">config.xml</code>中的<code class="highlighter-rouge">base-package</code>的子包，在这里也就是最好不要是<code class="highlighter-rouge">leap.demo</code>的子包；</p>
+    </li>
+    <li>
+      <p>如果api的包就是<code class="highlighter-rouge">config.xml</code>中的<code class="highlighter-rouge">base-package</code>的子包，那么可以不要配置api的<code class="highlighter-rouge">base-package</code>，直接配置<code class="highlighter-rouge">base-path</code>自动匹配<code class="highlighter-rouge">leap.demo</code>中的url即可。</p>
+    </li>
+  </ol>
+</blockquote>
+
+<p>编辑src/main/java/leap/api/controller/ApiDemoController.java</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">leap</span><span class="o">.</span><span class="na">api</span><span class="o">.</span><span class="na">controller</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">leap.web.annotation.Path</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">leap.web.annotation.http.GET</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">leap.web.api.mvc.ApiController</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">leap.web.api.mvc.ApiResponse</span><span class="o">;</span>
+
+<span class="nd">@Path</span><span class="o">(</span><span class="s">"/api"</span><span class="o">)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ApiDemoController</span> <span class="kd">extends</span> <span class="n">ApiController</span> <span class="o">{</span>
+    <span class="nd">@GET</span>
+    <span class="kd">public</span> <span class="n">ApiResponse</span><span class="o">&lt;</span><span class="n">ApiModel</span><span class="o">&gt;</span> <span class="nf">getModel</span><span class="o">(){</span>
+        <span class="k">return</span> <span class="n">ApiResponse</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="k">new</span> <span class="n">ApiModel</span><span class="o">(</span><span class="s">"api model"</span><span class="o">));</span>
+    <span class="o">}</span>
+
+    <span class="kd">private</span> <span class="kd">class</span> <span class="nc">ApiModel</span> <span class="o">{</span>
+        <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
+
+        <span class="kd">public</span> <span class="nf">ApiModel</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="n">name</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>修改pom.xml，添加api模块的依赖:</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>org.leapframework<span class="nt">&lt;/groupId&gt;</span>
+    <span class="nt">&lt;artifactId&gt;</span>leap-webapi<span class="nt">&lt;/artifactId&gt;</span>
+    <span class="nt">&lt;version&gt;</span>0.4.0b-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre>
+</div>
+
+<p>现在运行：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$&gt; mvn jetty:run -Djetty.port=8888
+</code></pre>
+</div>
+
+<p>在浏览器中访问如下地址：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>http://localhost:8888/demo-api/swagger.json
+</code></pre>
+</div>
+
+<p>可以看到这个json:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">{</span>
+  <span class="s2">"swagger"</span><span class="err">:</span> <span class="s2">"2.0"</span><span class="p">,</span>
+  <span class="s2">"info"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="s2">"title"</span><span class="err">:</span> <span class="s2">"demo-api"</span><span class="p">,</span>
+    <span class="s2">"description"</span><span class="err">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"version"</span><span class="err">:</span> <span class="s2">"1.0"</span>
+  <span class="p">},</span>
+  <span class="s2">"host"</span><span class="err">:</span> <span class="s2">"10.200.84.2:8080"</span><span class="p">,</span>
+  <span class="s2">"basePath"</span><span class="err">:</span> <span class="s2">"/demo-api"</span><span class="p">,</span>
+  <span class="s2">"consumes"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"application/json"</span>
+  <span class="p">],</span>
+  <span class="s2">"produces"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"application/json"</span>
+  <span class="p">],</span>
+  <span class="s2">"paths"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="s2">"/api"</span><span class="err">:</span> <span class="p">{</span>
+      <span class="s2">"get"</span><span class="err">:</span> <span class="p">{</span>
+        <span class="s2">"description"</span><span class="err">:</span> <span class="s2">""</span><span class="p">,</span>
+        <span class="s2">"operationId"</span><span class="err">:</span> <span class="s2">"getModel"</span><span class="p">,</span>
+        <span class="s2">"responses"</span><span class="err">:</span> <span class="p">{</span>
+          <span class="s2">"200"</span><span class="err">:</span> <span class="p">{</span>
+            <span class="s2">"summary"</span><span class="err">:</span> <span class="s2">"Success"</span><span class="p">,</span>
+            <span class="s2">"description"</span><span class="err">:</span> <span class="s2">""</span><span class="p">,</span>
+            <span class="s2">"schema"</span><span class="err">:</span> <span class="p">{</span>
+              <span class="s2">"$ref"</span><span class="err">:</span> <span class="s2">"#/definitions/ApiModel"</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">"definitions"</span><span class="err">:</span> <span class="p">{</span>
+    <span class="s2">"ApiModel"</span><span class="err">:</span> <span class="p">{</span>
+      <span class="s2">"type"</span><span class="err">:</span> <span class="s2">"object"</span><span class="p">,</span>
+      <span class="s2">"title"</span><span class="err">:</span> <span class="s2">"ApiModel"</span><span class="p">,</span>
+      <span class="s2">"properties"</span><span class="err">:</span> <span class="p">{</span>
+        <span class="s2">"name"</span><span class="err">:</span> <span class="p">{</span>
+          <span class="s2">"type"</span><span class="err">:</span> <span class="s2">"string"</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>说明json已经正常生成，api的开发环境搭建完成，现在只要直接把工程导入ide即可开始开发了，关于API更详细的配置，请参考官方文档。</p>
+
+  </div>
+  <hr/>
+	<ul>
+		<li><a href="/">首页</a></li>
+		<li><a href="/quickstart">快速开始</a></li>
+		<li><a href="/blog">博客</a></li>
+		<li>
+			
+		   <a href="https://leapframework.gitbooks.io/doc/content/" target="_blank">文档</a>
+		   
+		</li>
+	</ul>
+  
+</article>
+
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+            <div class="svg-icon">
+          
+<a href="mailto:penghj@bingosoft.net"><i class="icon-envelope icon-2x"></i></a>
+
+
+<a href="https://github.com/leapframework/framework"><i class="icon-github icon-2x"></i></a>
+<a href="https://www.gitbook.com/@leapframework"><i class="icon-book icon-2x"></i></a>
+
+
+
+
+
+
+
+
+
+            </div>
+        </footer>
+      </div>
+    </div>
+
+
+    
+
+  </body>
+</html>
