@@ -1,0 +1,1336 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <!-- Start book Sample GitBook -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>更新方法 | Sample GitBook</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.5.1">
+        <meta name="author" content="kael &lt;penghj@bingosoft.net&gt;">
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-splitter/splitter.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.css">
+        
+    
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../orm/model_interface/delete.html" />
+    
+    
+    <link rel="prev" href="../../orm/model_interface/inert.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book" data-level="8.5.1.3" data-chapter-title="更新方法" data-filepath="orm/model_interface/update.md" data-basepath="../.." data-revision="Fri Jan 22 2016 21:02:23 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        前言
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="getting-start/index.html">
+            
+                
+                    <a href="../../getting-start/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        快速开始
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="getting-start/construction.html">
+            
+                
+                    <a href="../../getting-start/construction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        快速环境搭建
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="getting-start/introduce.html">
+            
+                
+                    <a href="../../getting-start/introduce.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        示例工程说明
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="getting-start/first_action.html">
+            
+                
+                    <a href="../../getting-start/first_action.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        自定义第一个action
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="maven/index.html">
+            
+                
+                    <a href="../../maven/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        leap的maven库
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="created-project/index.html">
+            
+                
+                    <a href="../../created-project/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        新建WEB工程
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="leap-context/index.html">
+            
+                
+                    <a href="../../leap-context/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        控制反转和依赖注入
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="app-init/index.html">
+            
+                
+                    <a href="../../app-init/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        应用初始化
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="app-init/global.html">
+            
+                
+                    <a href="../../app-init/global.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Global使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="app-init/applistener.html">
+            
+                
+                    <a href="../../app-init/applistener.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        应用监听器
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="mvc/index.html">
+            
+                
+                    <a href="../../mvc/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        MVC
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="mvc/route_rule.html">
+            
+                
+                    <a href="../../mvc/route_rule.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        路由规则
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="mvc/leap_controller.html">
+            
+                
+                    <a href="../../mvc/leap_controller.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        controller和action的使用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="mvc/binding_params.html">
+            
+                
+                    <a href="../../mvc/binding_params.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        智能参数绑定
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="mvc/filter.html">
+            
+                
+                    <a href="../../mvc/filter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        拦截器
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="template/index.html">
+            
+                
+                    <a href="../../template/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        模板引擎
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="template/conception.html">
+            
+                
+                    <a href="../../template/conception.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        基础概念
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="template/syntax.html">
+            
+                
+                    <a href="../../template/syntax.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        基础语法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="template/directive.html">
+            
+                
+                    <a href="../../template/directive.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        指令集
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="template/directive_used.html">
+            
+                
+                    <a href="../../template/directive_used.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        指令应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="template/development.html">
+            
+                
+                    <a href="../../template/development.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        htpl开发优化
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="orm/index.html">
+            
+                
+                    <a href="../../orm/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        ORM
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="orm/datasource_conf.html">
+            
+                
+                    <a href="../../orm/datasource_conf.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        数据源配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="orm/model_used.html">
+            
+                
+                    <a href="../../orm/model_used.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Model应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="orm/dao_and_transaction.html">
+            
+                
+                    <a href="../../orm/dao_and_transaction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        dao对象和事务控制
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="orm/multiple_data_sources.html">
+            
+                
+                    <a href="../../orm/multiple_data_sources.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        多数据源应用
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="orm/interface.html">
+            
+                
+                    <a href="../../orm/interface.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        ORM接口说明
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.5.1" data-path="orm/model_interface.html">
+            
+                
+                    <a href="../../orm/model_interface.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.1.</b>
+                        
+                        Model接口
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.5.1.1" data-path="orm/model_interface/query.html">
+            
+                
+                    <a href="../../orm/model_interface/query.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.1.1.</b>
+                        
+                        查询方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.1.2" data-path="orm/model_interface/inert.html">
+            
+                
+                    <a href="../../orm/model_interface/inert.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.1.2.</b>
+                        
+                        新增方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="8.5.1.3" data-path="orm/model_interface/update.html">
+            
+                
+                    <a href="../../orm/model_interface/update.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.1.3.</b>
+                        
+                        更新方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.1.4" data-path="orm/model_interface/delete.html">
+            
+                
+                    <a href="../../orm/model_interface/delete.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.1.4.</b>
+                        
+                        删除方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.1.5" data-path="orm/model_interface/query_object.html">
+            
+                
+                    <a href="../../orm/model_interface/query_object.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.1.5.</b>
+                        
+                        查询对象方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.1.6" data-path="orm/model_interface/transaction.html">
+            
+                
+                    <a href="../../orm/model_interface/transaction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.1.6.</b>
+                        
+                        事务控制方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.1.7" data-path="orm/model_interface/cmd.html">
+            
+                
+                    <a href="../../orm/model_interface/cmd.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.1.7.</b>
+                        
+                        指令方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.1.8" data-path="orm/model_interface/other.html">
+            
+                
+                    <a href="../../orm/model_interface/other.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.1.8.</b>
+                        
+                        其他方法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.2" data-path="orm/dao_interface.html">
+            
+                
+                    <a href="../../orm/dao_interface.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.</b>
+                        
+                        DAO接口
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.5.2.1" data-path="orm/dao_interface/create.html">
+            
+                
+                    <a href="../../orm/dao_interface/create.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.1.</b>
+                        
+                        新增方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.2.2" data-path="orm/dao_interface/update.html">
+            
+                
+                    <a href="../../orm/dao_interface/update.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.2.</b>
+                        
+                        更新方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.2.3" data-path="orm/dao_interface/delete.html">
+            
+                
+                    <a href="../../orm/dao_interface/delete.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.3.</b>
+                        
+                        删除方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.2.4" data-path="orm/dao_interface/query.html">
+            
+                
+                    <a href="../../orm/dao_interface/query.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.4.</b>
+                        
+                        查询方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.2.5" data-path="orm/dao_interface/query_object.html">
+            
+                
+                    <a href="../../orm/dao_interface/query_object.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.5.</b>
+                        
+                        Query查询
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.2.6" data-path="orm/dao_interface/cmd.html">
+            
+                
+                    <a href="../../orm/dao_interface/cmd.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.6.</b>
+                        
+                        指令对象
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.2.7" data-path="orm/dao_interface/transaction.html">
+            
+                
+                    <a href="../../orm/dao_interface/transaction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.7.</b>
+                        
+                        事务控制
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.2.8" data-path="orm/dao_interface/validate.html">
+            
+                
+                    <a href="../../orm/dao_interface/validate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.8.</b>
+                        
+                        校验方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.2.9" data-path="orm/dao_interface/execute.html">
+            
+                
+                    <a href="../../orm/dao_interface/execute.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.9.</b>
+                        
+                        执行sql
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.2.10" data-path="orm/dao_interface/test.html">
+            
+                
+                    <a href="../../orm/dao_interface/test.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.10.</b>
+                        
+                        探测方法
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5.2.11" data-path="orm/dao_interface/other.html">
+            
+                
+                    <a href="../../orm/dao_interface/other.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.2.11.</b>
+                        
+                        其他方法
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="orm/sql_conf.html">
+            
+                
+                    <a href="../../orm/sql_conf.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.6.</b>
+                        
+                        sql配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="orm/dynamic_sql.html">
+            
+                
+                    <a href="../../orm/dynamic_sql.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.7.</b>
+                        
+                        动态sql应用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="security/index.html">
+            
+                
+                    <a href="../../security/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        安全模块
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="security/login_validate.html">
+            
+                
+                    <a href="../../security/login_validate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        登录校验
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="security/csrf_validate.html">
+            
+                
+                    <a href="../../security/csrf_validate.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        CSRF校验
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="security/xss_defense.html">
+            
+                
+                    <a href="../../security/xss_defense.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        XSS攻击防御
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="security/cors_support.html">
+            
+                
+                    <a href="../../security/cors_support.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        CORS支持
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Sample GitBook</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x66F4;&#x65B0;&#x65B9;&#x6CD5;">&#x66F4;&#x65B0;&#x65B9;&#x6CD5;</h1>
+<h2 id="&#x5355;&#x884C;&#x66F4;&#x65B0;"><a id="single_update"></a>&#x5355;&#x884C;&#x66F4;&#x65B0;</h2>
+<sec data-title="update(Object id,Map &lt; String, Object &gt; fields)" data-id="update1" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>update(Object id,Map &lt; String, Object &gt; fields)<a class="pull-right section atTitle btn btn-default" target="update1"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="update1"><div class="panel-body">
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">update</span><span class="hljs-params">(Object id,Map&lt;String, Object&gt; fields)</span>
+</span></code></pre>
+<hr>
+<p>&#x66F4;&#x65B0;&#x6307;&#x5B9A;id&#x7684;&#x6570;&#x636E;&#x5E93;&#x8BB0;&#x5F55;,fields&#x8868;&#x793A;&#x7684;&#x662F;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x5B57;&#x6BB5;,Key/Value&#x8868;&#x793A;field/value,&#x6BD4;&#x5982;:</p>
+<pre><code class="lang-java">Map kv = <span class="hljs-keyword">new</span> HashMap();
+kv.put(<span class="hljs-string">&quot;name&quot;</span>,<span class="hljs-string">&quot;jim&quot;</span>);
+kv.put(<span class="hljs-string">&quot;age&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>);
+Model.update(<span class="hljs-string">&quot;a&quot;</span>,kv);
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x6700;&#x7EC8;&#x6267;&#x884C;&#x7684;sql&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">model</span> <span class="hljs-keyword">SET</span> <span class="hljs-keyword">name</span>=<span class="hljs-string">&apos;jim&apos;</span>, age=<span class="hljs-number">3</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">id</span> = <span class="hljs-string">&apos;a&apos;</span>
+</span></code></pre>
+<p><strong>&#x53C2;&#x6570;:</strong></p>
+<ul>
+<li>id : &#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x8BB0;&#x5F55;id</li>
+<li>fields : &#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x8BB0;&#x5F55;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x503C;</li>
+</ul>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x6709;&#x8BB0;&#x5F55;&#x88AB;&#x66F4;&#x65B0;&#x5219;&#x8FD4;&#x56DE;true,&#x6CA1;&#x6709;&#x8BB0;&#x5F55;&#x88AB;&#x66F4;&#x65B0;&#x5219;&#x8FD4;&#x56DE;false</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="update(Object id,String field,Object value)" data-id="update2" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>update(Object id,String field,Object value)<a class="pull-right section atTitle btn btn-default" target="update2"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="update2"><div class="panel-body">
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">update</span><span class="hljs-params">(Object id,String field,Object value)</span>
+</span></code></pre>
+<hr>
+<p>&#x66F4;&#x65B0;&#x6307;&#x5B9A;id&#x7684;&#x6570;&#x636E;&#x5E93;&#x8BB0;&#x5F55;,field&#x8868;&#x793A;&#x7684;&#x662F;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x5B57;&#x6BB5;,value&#x8868;&#x793A;&#x76EE;&#x6807;&#x503C;,&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x76F8;&#x5F53;&#x4E8E;<code>boolean update(Object id,Map&lt;String, Object&gt; fields)</code>&#x4EC5;&#x8BBE;&#x7F6E;&#x4E00;&#x7EC4;key/value&#x65F6;&#x7684;&#x6548;&#x679C;&#x4E00;&#x81F4;.</p>
+<p><strong>&#x53C2;&#x6570;:</strong></p>
+<ul>
+<li>id : &#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x8BB0;&#x5F55;id</li>
+<li>field : &#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x8BB0;&#x5F55;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;</li>
+<li>value : &#x9700;&#x8981;&#x5C06;&#x5C5E;&#x6027;&#x4FEE;&#x6539;&#x7684;&#x76EE;&#x6807;&#x503C;</li>
+</ul>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x6709;&#x8BB0;&#x5F55;&#x88AB;&#x66F4;&#x65B0;&#x5219;&#x8FD4;&#x56DE;true,&#x6CA1;&#x6709;&#x8BB0;&#x5F55;&#x88AB;&#x66F4;&#x65B0;&#x5219;&#x8FD4;&#x56DE;false</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="update()" data-id="update3" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>update()<a class="pull-right section atTitle btn btn-default" target="update3"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="update3"><div class="panel-body">
+<pre><code class="lang-java">&lt;T extends Model&gt; <span class="hljs-function">T <span class="hljs-title">update</span><span class="hljs-params">()</span>
+</span></code></pre>
+<hr>
+<p>&#x6839;&#x636E;id&#x66F4;&#x65B0;&#x5F53;&#x524D;Model&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;,&#x5E76;&#x4E14;&#x5305;&#x542B;&#x6240;&#x6709;&#x4E3A;null&#x7684;&#x5C5E;&#x6027;,&#x6BD4;&#x5982;:</p>
+<pre><code class="lang-java">Model model = <span class="hljs-keyword">new</span> Model();
+model.setId(<span class="hljs-string">&quot;id&quot;</span>);
+model.update();
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6700;&#x7EC8;&#x4F1A;&#x6267;&#x884C;&#x5982;&#x4E0B;sql:</p>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">model</span> <span class="hljs-keyword">SET</span> field1 = <span class="hljs-literal">null</span>, field2 = <span class="hljs-literal">null</span> ,... <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">id</span>=<span class="hljs-string">&apos;id&apos;</span>
+</span></code></pre>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x66F4;&#x65B0;&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x88AB;&#x66F4;&#x65B0;&#x7684;&#x5BF9;&#x8C61;,&#x66F4;&#x65B0;&#x5931;&#x8D25;&#x5219;&#x629B;&#x51FA;&#x5F02;&#x5E38;</li>
+</ul>
+<p><strong>&#x5F02;&#x5E38;:</strong></p>
+<ul>
+<li><code>IllegalArgumentException</code>:&#x5F53;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;id&#x4E3A;null&#x65F6;&#x629B;&#x51FA;</li>
+<li><code>RecordNotSavedException</code>:&#x66F4;&#x65B0;&#x8BB0;&#x5F55;&#x5931;&#x8D25;&#x65F6;&#x629B;&#x51FA;</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="update(UpdateCallback &lt; T &gt; callback)" data-id="update4" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>update(UpdateCallback &lt; T &gt; callback)<a class="pull-right section atTitle btn btn-default" target="update4"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="update4"><div class="panel-body">
+<pre><code class="lang-java">&lt;T extends Model&gt; <span class="hljs-function">T <span class="hljs-title">update</span><span class="hljs-params">(UpdateCallback&lt;T&gt; callback)</span>
+</span></code></pre>
+<hr>
+<p>&#x66F4;&#x65B0;Model&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;,&#x5728;&#x66F4;&#x65B0;&#x524D;&#x8FDB;&#x884C;&#x56DE;&#x8C03;&#x64CD;&#x4F5C;.</p>
+<p><strong>&#x53C2;&#x6570;:</strong></p>
+<ul>
+<li>callback:UpdateCallback&#x7684;&#x5B9E;&#x4F8B;,&#x5728;Model&#x5BF9;&#x8C61;&#x4FDD;&#x5B58;&#x4E4B;&#x524D;&#x4F1A;&#x8C03;&#x7528;<code>callback.preCreate()</code>,&#x4FDD;&#x5B58;&#x4E4B;&#x540E;&#x4F1A;&#x8C03;&#x7528;<code>callback.postCreate()</code>,&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x53D7;&#x4E8B;&#x52A1;&#x63A7;&#x5236;,&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x56DE;&#x6EDA;&#x4FDD;&#x5B58;.</li>
+</ul>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x66F4;&#x65B0;&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x88AB;&#x66F4;&#x65B0;&#x7684;&#x5BF9;&#x8C61;,&#x5931;&#x8D25;&#x5219;&#x629B;&#x51FA;&#x5F02;&#x5E38;</li>
+</ul>
+<p><strong>&#x5F02;&#x5E38;:</strong></p>
+<ul>
+<li><code>IllegalStateException</code>:&#x5F53;&#x88AB;&#x66F4;&#x65B0;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;id&#x4E3A;null&#x65F6;&#x629B;&#x51FA;</li>
+<li><code>RecordNotSavedException</code>:&#x66F4;&#x65B0;&#x8BB0;&#x5F55;&#x5931;&#x8D25;&#x65F6;&#x629B;&#x51FA;</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="update(PostUpdateCallback &lt; T &gt; callback)" data-id="update5" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>update(PostUpdateCallback &lt; T &gt; callback)<a class="pull-right section atTitle btn btn-default" target="update5"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="update5"><div class="panel-body">
+<pre><code class="lang-java">&lt;T extends Model&gt; <span class="hljs-function">T <span class="hljs-title">update</span><span class="hljs-params">(PostUpdateCallback&lt;T&gt; callback)</span>
+</span></code></pre>
+<hr>
+<p>&#x66F4;&#x65B0;Model&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;,&#x5728;&#x66F4;&#x65B0;&#x524D;&#x8FDB;&#x884C;&#x56DE;&#x8C03;&#x64CD;&#x4F5C;.</p>
+<p><strong>&#x53C2;&#x6570;:</strong></p>
+<ul>
+<li>callback:PostUpdateCallback&#x7684;&#x5B9E;&#x4F8B;,&#x5728;Model&#x5BF9;&#x8C61;&#x4FDD;&#x5B58;&#x4E4B;&#x524D;&#x4F1A;&#x8C03;&#x7528;<code>callback.preCreate()</code>,&#x4FDD;&#x5B58;&#x4E4B;&#x540E;&#x4F1A;&#x8C03;&#x7528;<code>callback.postCreate()</code>,&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x53D7;&#x4E8B;&#x52A1;&#x63A7;&#x5236;,&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x56DE;&#x6EDA;&#x4FDD;&#x5B58;.<br><code>callback.preCreate()</code>&#x5DF2;&#x7ECF;&#x63D0;&#x4F9B;&#x4E86;&#x9ED8;&#x8BA4;&#x5B9E;&#x73B0;,&#x56E0;&#x6B64;&#x53EA;&#x9700;&#x8981;&#x5B9E;&#x73B0;<code>callback.postCreate()</code>&#x5373;&#x53EF;.</li>
+</ul>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x66F4;&#x65B0;&#x6210;&#x529F;&#x5219;&#x8FD4;&#x56DE;&#x88AB;&#x66F4;&#x65B0;&#x7684;&#x5BF9;&#x8C61;,&#x5931;&#x8D25;&#x5219;&#x629B;&#x51FA;&#x5F02;&#x5E38;</li>
+</ul>
+<p><strong>&#x5F02;&#x5E38;:</strong></p>
+<ul>
+<li><code>IllegalStateException</code>:&#x5F53;&#x88AB;&#x66F4;&#x65B0;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;id&#x4E3A;null&#x65F6;&#x629B;&#x51FA;</li>
+<li><code>RecordNotSavedException</code>:&#x66F4;&#x65B0;&#x8BB0;&#x5F55;&#x5931;&#x8D25;&#x65F6;&#x629B;&#x51FA;</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="tryUpdate()" data-id="tryUpdate1" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>tryUpdate()<a class="pull-right section atTitle btn btn-default" target="tryUpdate1"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="tryUpdate1"><div class="panel-body">
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">tryUpdate</span><span class="hljs-params">()</span>
+</span></code></pre>
+<hr>
+<p>&#x66F4;&#x65B0;Model&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;.</p>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x6709;&#x8BB0;&#x5F55;&#x88AB;&#x66F4;&#x65B0;&#x5219;&#x8FD4;&#x56DE;true,&#x6CA1;&#x6709;&#x8BB0;&#x5F55;&#x88AB;&#x66F4;&#x65B0;&#x5219;&#x8FD4;&#x56DE;false</li>
+</ul>
+<p><strong>&#x5F02;&#x5E38;:</strong></p>
+<ul>
+<li><code>IllegalStateException</code>:&#x5F53;&#x88AB;&#x66F4;&#x65B0;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;id&#x4E3A;null&#x65F6;&#x629B;&#x51FA;</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="tryUpdate(UpdateCallback &lt; T &gt; callback)" data-id="tryUpdate2" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>tryUpdate(UpdateCallback &lt; T &gt; callback)<a class="pull-right section atTitle btn btn-default" target="tryUpdate2"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="tryUpdate2"><div class="panel-body">
+<pre><code class="lang-java">&lt;T extends Model&gt; <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">tryUpdate</span><span class="hljs-params">(UpdateCallback&lt;T&gt; callback)</span>
+</span></code></pre>
+<hr>
+<p>&#x66F4;&#x65B0;Model&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;,&#x5728;&#x66F4;&#x65B0;&#x524D;&#x8FDB;&#x884C;&#x56DE;&#x8C03;&#x64CD;&#x4F5C;.</p>
+<p><strong>&#x53C2;&#x6570;:</strong></p>
+<ul>
+<li>callback:UpdateCallback&#x7684;&#x5B9E;&#x4F8B;,&#x5728;Model&#x5BF9;&#x8C61;&#x4FDD;&#x5B58;&#x4E4B;&#x524D;&#x4F1A;&#x8C03;&#x7528;<code>callback.preCreate()</code>,&#x4FDD;&#x5B58;&#x4E4B;&#x540E;&#x4F1A;&#x8C03;&#x7528;<code>callback.postCreate()</code>,&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x53D7;&#x4E8B;&#x52A1;&#x63A7;&#x5236;,&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x56DE;&#x6EDA;&#x4FDD;&#x5B58;.  </li>
+</ul>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x6709;&#x8BB0;&#x5F55;&#x88AB;&#x66F4;&#x65B0;&#x5219;&#x8FD4;&#x56DE;true,&#x6CA1;&#x6709;&#x8BB0;&#x5F55;&#x88AB;&#x66F4;&#x65B0;&#x5219;&#x8FD4;&#x56DE;false</li>
+</ul>
+<p><strong>&#x5F02;&#x5E38;:</strong></p>
+<ul>
+<li><code>IllegalStateException</code>:&#x5F53;&#x88AB;&#x66F4;&#x65B0;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;id&#x4E3A;null&#x65F6;&#x629B;&#x51FA;</li>
+</ul>
+</div></div></div></sec>
+<h2 id="&#x591A;&#x884C;&#x66F4;&#x65B0;"><a id="multi_update"></a>&#x591A;&#x884C;&#x66F4;&#x65B0;</h2>
+<sec data-title="updateAll(Object[] records)" data-id="updateAll1" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>updateAll(Object[] records)<a class="pull-right section atTitle btn btn-default" target="updateAll1"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="updateAll1"><div class="panel-body">
+<pre><code class="lang-java"><span class="hljs-keyword">int</span>[] updateAll(Object[] records)
+</code></pre>
+<hr>
+<p>&#x540C;&#x65F6;&#x66F4;&#x65B0;&#x591A;&#x4E2A;Model&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;.</p>
+<p><strong>&#x53C2;&#x6570;:</strong></p>
+<ul>
+<li>records:&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x6570;&#x7EC4;</li>
+</ul>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x66F4;&#x65B0;&#x540E;&#x5F71;&#x54CD;&#x7684;&#x884C;&#x6570;&#x7684;&#x6570;&#x7EC4;`</li>
+</ul>
+<p><strong>&#x5F02;&#x5E38;:</strong></p>
+<ul>
+<li><code>IllegalStateException</code>:&#x5F53;&#x88AB;&#x66F4;&#x65B0;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x4E2D;&#x5305;&#x542B;</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="updateAll(Condition&lt;T&gt; condition)" data-id="updateAll2" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>updateAll(Condition<t> condition)<a class="pull-right section atTitle btn btn-default" target="updateAll2"><span class="fa fa-angle-up"></span></a></t></h2></div><div class="panel-collapse in" id="updateAll2"><div class="panel-body">
+<pre><code class="lang-java">&lt;T extends Model&gt; <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">updateAll</span><span class="hljs-params">(Condition&lt;T&gt; condition)</span>
+</span></code></pre>
+<hr>
+<p>// &#x9884;&#x7559;&#x63A5;&#x53E3;,&#x6682;&#x4E0D;&#x53EF;&#x7528;</p>
+</div></div></div></sec>
+<sec data-title="updateAll(String whereExpression)" data-id="updateAll3" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>updateAll(String whereExpression)<a class="pull-right section atTitle btn btn-default" target="updateAll3"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="updateAll3"><div class="panel-body">
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">updateAll</span><span class="hljs-params">(String whereExpression)</span>
+</span></code></pre>
+<hr>
+<p>&#x6839;&#x636E;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x66F4;&#x65B0;&#x8BB0;&#x5F55;,&#x66F4;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#x662F;&#x5F53;&#x524D;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;,&#x4F46;&#x662F;id(&#x4E3B;&#x952E;&#x5C5E;&#x6027;)&#x4E0D;&#x4F1A;&#x88AB;&#x66F4;&#x65B0;,&#x6BD4;&#x5982;:</p>
+<pre><code class="lang-java">Model model = <span class="hljs-keyword">new</span> Model();
+model.setField1(<span class="hljs-string">&quot;field1&quot;</span>);
+model.setField2(<span class="hljs-string">&quot;field2&quot;</span>);
+model.updateAll(<span class="hljs-string">&quot;name=&apos;modelname&apos;&quot;</span>);
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x6700;&#x7EC8;&#x6267;&#x884C;&#x7684;sql&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">model</span> <span class="hljs-keyword">SET</span> field1 = <span class="hljs-string">&apos;field1&apos;</span>, field2=<span class="hljs-string">&apos;field2&apos;</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span>=<span class="hljs-string">&apos;modelname&apos;</span>
+</span></code></pre>
+<p><strong>&#x53C2;&#x6570;:</strong></p>
+<ul>
+<li>whereExpression:&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;,&#x53EF;&#x4EE5;&#x5305;&#x542B;WHERE&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x5305;&#x542B;WHERE,&#x4F46;&#x662F;&#x9700;&#x8981;&#x6309;&#x7167;sql&#x7684;&#x8BED;&#x6CD5;.</li>
+</ul>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x53D7;&#x5F71;&#x54CD;&#x7684;&#x884C;&#x6570;</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="updateAll(String whereExpression,Object... args)" data-id="updateAll4" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>updateAll(String whereExpression,Object... args)<a class="pull-right section atTitle btn btn-default" target="updateAll4"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="updateAll4"><div class="panel-body">
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">updateAll</span><span class="hljs-params">(String whereExpression,Object... args)</span>
+</span></code></pre>
+<hr>
+<p>&#x6839;&#x636E;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x66F4;&#x65B0;&#x8BB0;&#x5F55;,&#x66F4;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#x662F;&#x5F53;&#x524D;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;,&#x4F46;&#x662F;id(&#x4E3B;&#x952E;&#x5C5E;&#x6027;)&#x4E0D;&#x4F1A;&#x88AB;&#x66F4;&#x65B0;,&#x8FD9;&#x91CC;&#x7684;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x5141;&#x8BB8;&#x5E26;&#x53C2;&#x6570;&#x5360;&#x4F4D;&#x7B26;,&#x6BD4;&#x5982;:</p>
+<pre><code class="lang-java">Model model = <span class="hljs-keyword">new</span> Model();
+model.setField1(<span class="hljs-string">&quot;field1&quot;</span>);
+model.setField2(<span class="hljs-string">&quot;field2&quot;</span>);
+model.updateAll(<span class="hljs-string">&quot;name=?&quot;</span>,<span class="hljs-string">&quot;modelname&quot;</span>);
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x6700;&#x7EC8;&#x6267;&#x884C;&#x7684;sql&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">model</span> <span class="hljs-keyword">SET</span> field1 = <span class="hljs-string">&apos;field1&apos;</span>, field2=<span class="hljs-string">&apos;field2&apos;</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span>=<span class="hljs-string">&apos;modelname&apos;</span>
+</span></code></pre>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x70B9;&#x9700;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x7684;:  </p>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;leapQL&#x5BF9;IN&#x5173;&#x952E;&#x5B57;&#x7684;&#x7279;&#x6B8A;&#x5904;&#x7406;,&#x5982;&#x679C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x4EE3;&#x7801;:</p>
+<pre><code class="lang-java">String names = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">&quot;name1&quot;</span>,<span class="hljs-string">&quot;name2&quot;</span>,<span class="hljs-string">&quot;name3&quot;</span>};
+model.updateAll(<span class="hljs-string">&quot;name IN ?&quot;</span>,names);
+</code></pre>
+<p>&#x6267;&#x884C;&#x65F6;&#x4F1A;&#x53D1;&#x73B0;sql&#x89E3;&#x6790;&#x5931;&#x8D25;&#x4E86;,&#x5E76;&#x4E14;&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&#x662F;&#x53C2;&#x6570;&#x5360;&#x4F4D;&#x7B26;&#x7684;&#x6570;&#x91CF;&#x548C;&#x53C2;&#x6570;&#x503C;&#x4E0D;&#x5BF9;&#x5E94;,&#x8FD9;&#x662F;&#x56E0;&#x4E3A;java&#x672C;&#x8EAB;&#x5BF9;&#x53EF;&#x53D8;&#x4F20;&#x53C2;&#x7684;&#x5904;&#x7406;&#x5BFC;&#x81F4;&#x7684;&#x95EE;&#x9898;.</p>
+<p>java&#x4E2D;,&#x53EF;&#x53D8;&#x4F20;&#x53C2;&#x662F;&#x5DF2;&#x6570;&#x7EC4;&#x7684;&#x65B9;&#x5F0F;&#x63A5;&#x6536;&#x7684;,&#x8FD9;&#x6837;&#x4F1A;&#x5BFC;&#x81F4;&#x6211;&#x4EEC;&#x7684;&#x6570;&#x7EC4;&#x4F20;&#x8FDB;&#x53BB;&#x540E;,&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x88AB;&#x5F53;&#x6210;&#x53EF;&#x53D8;&#x4F20;&#x53C2;&#x7684;&#x5355;&#x72EC;&#x53C2;&#x6570;&#x4E86;,&#x56E0;&#x6B64;&#x4F1A;&#x5BFC;&#x81F4;&#x53C2;&#x6570;&#x6570;&#x91CF;&#x548C;&#x5360;&#x4F4D;&#x7B26;&#x6570;&#x91CF;&#x4E0D;&#x540C;&#x7684;&#x5F02;&#x5E38;,&#x89E3;&#x51B3;&#x7684;&#x65B9;&#x6CD5;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Object[]&#x6570;&#x7EC4;,&#x5E76;&#x5C06;&#x6211;&#x4EEC;&#x7684;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;Object[]&#x6570;&#x7EC4;&#x7684;&#x5143;&#x7D20;&#x5373;&#x53EF;,&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-java">String names = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">&quot;name1&quot;</span>,<span class="hljs-string">&quot;name2&quot;</span>,<span class="hljs-string">&quot;name3&quot;</span>};
+model.updateAll(<span class="hljs-string">&quot;name IN ?&quot;</span>,<span class="hljs-keyword">new</span> Object[]{names});
+</code></pre>
+<p>&#x6700;&#x7EC8;&#x6267;&#x884C;&#x7684;sql&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">model</span> <span class="hljs-keyword">SET</span> <span class="hljs-keyword">name</span>=xxx <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> <span class="hljs-keyword">IN</span> (<span class="hljs-string">&quot;name1&quot;</span>,<span class="hljs-string">&quot;name2&quot;</span>,<span class="hljs-string">&quot;name3&quot;</span>)
+</span></code></pre>
+<p><strong>&#x53C2;&#x6570;:</strong></p>
+<ul>
+<li>whereExpression:&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;,&#x53EF;&#x4EE5;&#x5305;&#x542B;WHERE&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x5305;&#x542B;WHERE,&#x4F46;&#x662F;&#x9700;&#x8981;&#x6309;&#x7167;sql&#x7684;&#x8BED;&#x6CD5;.</li>
+<li>args:&#x53C2;&#x6570;&#x5360;&#x4F4D;&#x7B26;&#x5BF9;&#x5E94;&#x7684;&#x53C2;&#x6570;&#x503C;</li>
+</ul>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x53D7;&#x5F71;&#x54CD;&#x7684;&#x884C;&#x6570;</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="updateAll(String whereExpression,Map &lt; String, Object &gt; params)" data-id="updateAll5" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>updateAll(String whereExpression,Map &lt; String, Object &gt; params)<a class="pull-right section atTitle btn btn-default" target="updateAll5"><span class="fa fa-angle-up"></span></a></h2></div><div class="panel-collapse in" id="updateAll5"><div class="panel-body">
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">updateAll</span><span class="hljs-params">(String whereExpression,Map&lt;String, Object&gt; params)</span>
+</span></code></pre>
+<hr>
+<p>&#x6839;&#x636E;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x66F4;&#x65B0;&#x8BB0;&#x5F55;,&#x66F4;&#x65B0;&#x7684;&#x5C5E;&#x6027;&#x662F;&#x5F53;&#x524D;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;,&#x4F46;&#x662F;id(&#x4E3B;&#x952E;&#x5C5E;&#x6027;)&#x4E0D;&#x4F1A;&#x88AB;&#x66F4;&#x65B0;,&#x8FD9;&#x91CC;&#x7684;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x5141;&#x8BB8;&#x5E26;&#x547D;&#x540D;&#x53C2;&#x6570;&#x5360;&#x4F4D;&#x7B26;,&#x6BD4;&#x5982;:</p>
+<pre><code class="lang-java">Model model = <span class="hljs-keyword">new</span> Model();
+model.setField1(<span class="hljs-string">&quot;field1&quot;</span>);
+model.setField2(<span class="hljs-string">&quot;field2&quot;</span>);
+Map map = <span class="hljs-keyword">new</span> HashMap();
+map.put(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;modelname&quot;</span>);
+model.updateAll(<span class="hljs-string">&quot;name=:name&quot;</span>,map);
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x6700;&#x7EC8;&#x6267;&#x884C;&#x7684;sql&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">model</span> <span class="hljs-keyword">SET</span> field1 = <span class="hljs-string">&apos;field1&apos;</span>, field2=<span class="hljs-string">&apos;field2&apos;</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span>=<span class="hljs-string">&apos;modelname&apos;</span>
+</span></code></pre>
+<p><strong>&#x53C2;&#x6570;:</strong></p>
+<ul>
+<li>whereExpression:&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;,&#x53EF;&#x4EE5;&#x5305;&#x542B;WHERE&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x5305;&#x542B;WHERE,&#x4F46;&#x662F;&#x9700;&#x8981;&#x6309;&#x7167;sql&#x7684;&#x8BED;&#x6CD5;.</li>
+<li>params:&#x547D;&#x540D;&#x53C2;&#x6570;&#x7684;&#x53C2;&#x6570;&#x540D;&#x548C;&#x503C;</li>
+</ul>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x53D7;&#x5F71;&#x54CD;&#x7684;&#x884C;&#x6570;</li>
+</ul>
+</div></div></div></sec>
+<sec data-title="updateAll(Map&lt;String, Object&gt; fields, String whereExpression, Object... args)" data-id="updateAll6" data-show="true"><div class="panel panel-default"><div class="panel-heading"><h2>updateAll(Map<string, object=""> fields, String whereExpression, Object... args)<a class="pull-right section atTitle btn btn-default" target="updateAll6"><span class="fa fa-angle-up"></span></a></string,></h2></div><div class="panel-collapse in" id="updateAll6"><div class="panel-body">
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">updateAll</span><span class="hljs-params">(Map&lt;String, Object&gt; fields, String whereExpression, Object... args)</span>
+</span></code></pre>
+<hr>
+<p>&#x5C06;&#x7B26;&#x5408;where&#x6761;&#x4EF6;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x5E93;&#x8BB0;&#x5F55;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x66F4;&#x65B0;&#x6210;fields&#x4E2D;&#x7684;value,&#x8FD9;&#x91CC;&#x7684;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x5141;&#x8BB8;&#x5E26;&#x53C2;&#x6570;&#x5360;&#x4F4D;&#x7B26;,&#x6BD4;&#x5982;:</p>
+<pre><code class="lang-java">Map kv = <span class="hljs-keyword">new</span> HashMap();
+kv.put(<span class="hljs-string">&quot;name&quot;</span>,<span class="hljs-string">&quot;jim&quot;</span>);
+kv.put(<span class="hljs-string">&quot;age&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>);
+Model.updateAll(kv,<span class="hljs-string">&quot;name=?&quot;</span>,<span class="hljs-string">&quot;lucy&quot;</span>);
+</code></pre>
+<p>&#x90A3;&#x4E48;&#x6700;&#x7EC8;&#x6267;&#x884C;&#x7684;sql&#x5982;&#x4E0B;:</p>
+<pre><code class="lang-sql"><span class="hljs-operator"><span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">model</span> <span class="hljs-keyword">SET</span> <span class="hljs-keyword">name</span>=<span class="hljs-string">&apos;jim&apos;</span>, age=<span class="hljs-number">3</span> <span class="hljs-keyword">WHERE</span> <span class="hljs-keyword">name</span> = <span class="hljs-string">&apos;lucy&apos;</span>
+</span></code></pre>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x5305;&#x542B;IN&#x5173;&#x952E;&#x5B57;&#x7684;&#x53C2;&#x6570;&#x65F6;,&#x53EF;&#x4EE5;&#x53C2;&#x8003;<code>int updateAll(String whereExpression,Object... args)</code>&#x7684;&#x8BF4;&#x660E;&#x5904;&#x7406;.</p>
+<p><strong>&#x53C2;&#x6570;:</strong></p>
+<ul>
+<li>fields : &#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;&#x8BB0;&#x5F55;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x503C;</li>
+<li>whereExpression : sql&#x7684;where&#x8868;&#x8FBE;&#x5F0F;,&#x53EF;&#x4EE5;&#x5305;&#x542B;where&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x5199;where,&#x901A;&#x8FC7;&#x5360;&#x4F4D;&#x7B26;<code>?</code>&#x8868;&#x793A;&#x53C2;&#x6570;</li>
+<li>args : where&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;,&#x6309;&#x7167;&#x987A;&#x5E8F;&#x8BBE;&#x5165;where&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5360;&#x4F4D;&#x7B26;</li>
+</ul>
+<p><strong>&#x7ED3;&#x679C;:</strong></p>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;int,&#x8868;&#x793A;&#x53D7;&#x5F71;&#x54CD;&#x7684;&#x884C;&#x6570;</li>
+</ul>
+</div></div></div></sec>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../orm/model_interface/inert.html" class="navigation navigation-prev " aria-label="Previous page: 新增方法"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../orm/model_interface/delete.html" class="navigation navigation-next " aria-label="Next page: 删除方法"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-splitter/splitter.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-toggle-chapters/toggle.js"></script>
+    
+
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sectionx/sectionx.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"splitter":{},"toggle-chapters":{},"sectionx":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Sample GitBook -->
+</html>
