@@ -16,7 +16,7 @@ description: 全栈式的web应用开发框架
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: penghj@bingosoft.net
+#  email: penghj@bingosoft.net
   facebook:
   flickr:
   github: leapframework/framework
