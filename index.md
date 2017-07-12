@@ -7,40 +7,13 @@ leap是一个全栈式的web应用开发框架，高效便捷，上手简单，�
 
 ## 简单的依赖配置
 
-在一个新的maven工程中，只需编辑pom.xml,添加资源库地址(如果已经在全局设置leap的资源库地址,这里也可以不配置)：
-
-```xml
-<repositories>
-    <!-- leap快照资源库 -->
-   <repository>
-        <id>leap-snapshots</id>
-        <url>https://raw.githubusercontent.com/leapframework/repo/master/snapshots</url>
-        <snapshots>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy>
-            <checksumPolicy>warn</checksumPolicy>
-        </snapshots>
-   </repository>
-    
-    <repository>
-        <id>leap-releases</id>
-        <url>https://raw.githubusercontent.com/leapframework/repo/master/releases</url>
-        <releases>
-            <enabled>true</enabled>
-            <updatePolicy>never</updatePolicy>
-            <checksumPolicy>warn</checksumPolicy>
-        </releases>
-    </repository>
-</repositories>
-```
-
-添加如下依赖:
+在一个新的maven工程中，只需添加如下依赖:
 
 ```xml
 <dependency>
     <groupId>org.leapframework</groupId>
     <artifactId>leap</artifactId>
-    <version>${leap.version}</version>
+    <version>[0.6.3b,]</version>
     <type>pom</type>
 </dependency>
 ```
