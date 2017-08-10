@@ -1,0 +1,2521 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>启用 Restd · Leap 框架官方开发文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-cuav-chapters/cuav-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="entity.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../quick_start/">
+            
+                <a href="../../../quick_start/">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../../quick_start/web/">
+            
+                <a href="../../../quick_start/web/">
+            
+                    
+                    搭建 Web 工程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../../../quick_start/web/proj.html">
+            
+                <a href="../../../quick_start/web/proj.html">
+            
+                    
+                    创建工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.2" data-path="../../../quick_start/web/pom.html">
+            
+                <a href="../../../quick_start/web/pom.html">
+            
+                    
+                    配置 pom.xml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.3" data-path="../../../quick_start/web/web.html">
+            
+                <a href="../../../quick_start/web/web.html">
+            
+                    
+                    配置 web.xml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.4" data-path="../../../quick_start/web/conf.html">
+            
+                <a href="../../../quick_start/web/conf.html">
+            
+                    
+                    配置 config.xml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.5" data-path="../../../quick_start/web/ds.html">
+            
+                <a href="../../../quick_start/web/ds.html">
+            
+                    
+                    配置数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.6" data-path="../../../quick_start/web/sql.html">
+            
+                <a href="../../../quick_start/web/sql.html">
+            
+                    
+                    创建数据表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.7" data-path="../../../quick_start/web/model.html">
+            
+                <a href="../../../quick_start/web/model.html">
+            
+                    
+                    创建 Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.8" data-path="../../../quick_start/web/service.html">
+            
+                <a href="../../../quick_start/web/service.html">
+            
+                    
+                    创建 Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.9" data-path="../../../quick_start/web/controller.html">
+            
+                <a href="../../../quick_start/web/controller.html">
+            
+                    
+                    创建 Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.10" data-path="../../../quick_start/web/run.html">
+            
+                <a href="../../../quick_start/web/run.html">
+            
+                    
+                    运行测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../../quick_start/api/">
+            
+                <a href="../../../quick_start/api/">
+            
+                    
+                    搭建 API 工程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="../../../quick_start/api/proj.html">
+            
+                <a href="../../../quick_start/api/proj.html">
+            
+                    
+                    创建工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.2" data-path="../../../quick_start/api/pom.html">
+            
+                <a href="../../../quick_start/api/pom.html">
+            
+                    
+                    配置 pom.xml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3" data-path="../../../quick_start/api/web.html">
+            
+                <a href="../../../quick_start/api/web.html">
+            
+                    
+                    配置 web.xml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4" data-path="../../../quick_start/api/conf.html">
+            
+                <a href="../../../quick_start/api/conf.html">
+            
+                    
+                    配置 config.xml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.5" data-path="../../../quick_start/api/ds.html">
+            
+                <a href="../../../quick_start/api/ds.html">
+            
+                    
+                    配置数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.6" data-path="../../../quick_start/api/sql.html">
+            
+                <a href="../../../quick_start/api/sql.html">
+            
+                    
+                    创建数据表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.7" data-path="../../../quick_start/api/api.html">
+            
+                <a href="../../../quick_start/api/api.html">
+            
+                    
+                    创建 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.8" data-path="../../../quick_start/api/model.html">
+            
+                <a href="../../../quick_start/api/model.html">
+            
+                    
+                    创建 Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.9" data-path="../../../quick_start/api/controller.html">
+            
+                <a href="../../../quick_start/api/controller.html">
+            
+                    
+                    创建 Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.10" data-path="../../../quick_start/api/run.html">
+            
+                <a href="../../../quick_start/api/run.html">
+            
+                    
+                    运行测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.11" data-path="../../../quick_start/api/restd.html">
+            
+                <a href="../../../quick_start/api/restd.html">
+            
+                    
+                    使用 Restd
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../config/">
+            
+                <a href="../../../config/">
+            
+                    
+                    工程配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../../config/structure.html">
+            
+                <a href="../../../config/structure.html">
+            
+                    
+                    工程结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../../config/dependency.html">
+            
+                <a href="../../../config/dependency.html">
+            
+                    
+                    配置依赖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../../config/web.html">
+            
+                <a href="../../../config/web.html">
+            
+                    
+                    配置 web.xml
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../../config/common.html">
+            
+                <a href="../../../config/common.html">
+            
+                    
+                    通用配置约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../../config/base.html">
+            
+                <a href="../../../config/base.html">
+            
+                    
+                    基本配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../../../config/profile.html">
+            
+                <a href="../../../config/profile.html">
+            
+                    
+                    使用 profile 切换配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="../../../config/multi_module.html">
+            
+                <a href="../../../config/multi_module.html">
+            
+                    
+                    多模块工程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../bean/">
+            
+                <a href="../../../bean/">
+            
+                    
+                    依赖注入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../../bean/declare.html">
+            
+                <a href="../../../bean/declare.html">
+            
+                    
+                    Bean 声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../../bean/inject.html">
+            
+                <a href="../../../bean/inject.html">
+            
+                    
+                    Bean 注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../../orm/">
+            
+                <a href="../../../orm/">
+            
+                    
+                    数据访问
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../../orm/datasource.html">
+            
+                <a href="../../../orm/datasource.html">
+            
+                    
+                    数据源配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../../../orm/mapping.html">
+            
+                <a href="../../../orm/mapping.html">
+            
+                    
+                    实体映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../../../orm/entity/">
+            
+                <a href="../../../orm/entity/">
+            
+                    
+                    实体操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.3.1" data-path="../../../orm/entity/crud/">
+            
+                <a href="../../../orm/entity/crud/">
+            
+                    
+                    增删改查
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.3.1.1" data-path="../../../orm/entity/crud/create.html">
+            
+                <a href="../../../orm/entity/crud/create.html">
+            
+                    
+                    新增数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3.1.2" data-path="../../../orm/entity/crud/delete.html">
+            
+                <a href="../../../orm/entity/crud/delete.html">
+            
+                    
+                    删除数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3.1.3" data-path="../../../orm/entity/crud/update.html">
+            
+                <a href="../../../orm/entity/crud/update.html">
+            
+                    
+                    更新数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3.1.4" data-path="../../../orm/entity/crud/query.html">
+            
+                <a href="../../../orm/entity/crud/query.html">
+            
+                    
+                    查询数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3.2" data-path="../../../orm/entity/relation/">
+            
+                <a href="../../../orm/entity/relation/">
+            
+                    
+                    实体关系
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.3.2.1" data-path="../../../orm/entity/relation/many_to_one.html">
+            
+                <a href="../../../orm/entity/relation/many_to_one.html">
+            
+                    
+                    多对一关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3.2.2" data-path="../../../orm/entity/relation/many_to_many.html">
+            
+                <a href="../../../orm/entity/relation/many_to_many.html">
+            
+                    
+                    多对多关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4" data-path="../../../orm/sql/">
+            
+                <a href="../../../orm/sql/">
+            
+                    
+                    SQL 操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.4.1" data-path="../../../orm/sql/config.html">
+            
+                <a href="../../../orm/sql/config.html">
+            
+                    
+                    SQL 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.2" data-path="../../../orm/sql/place_holder.html">
+            
+                <a href="../../../orm/sql/place_holder.html">
+            
+                    
+                    SQL 占位符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.3" data-path="../../../orm/sql/dyna.html">
+            
+                <a href="../../../orm/sql/dyna.html">
+            
+                    
+                    SQL 动态语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.4" data-path="../../../orm/sql/exec.html">
+            
+                <a href="../../../orm/sql/exec.html">
+            
+                    
+                    SQL 执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.5" data-path="../../../orm/sql/query.html">
+            
+                <a href="../../../orm/sql/query.html">
+            
+                    
+                    SQL 查询接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.4.6" data-path="../../../orm/sql/env_var.html">
+            
+                <a href="../../../orm/sql/env_var.html">
+            
+                    
+                    在 SQL 中使用环境变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.5" data-path="../../../orm/transaction.html">
+            
+                <a href="../../../orm/transaction.html">
+            
+                    
+                    事务控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.6" data-path="../../../orm/dynamic_table_name.html">
+            
+                <a href="../../../orm/dynamic_table_name.html">
+            
+                    
+                    动态表名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.7" data-path="../../../orm/sql_monitor.html">
+            
+                <a href="../../../orm/sql_monitor.html">
+            
+                    
+                    SQL 配置重载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../../mvc/">
+            
+                <a href="../../../mvc/">
+            
+                    
+                    MVC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../../mvc/route/">
+            
+                <a href="../../../mvc/route/">
+            
+                    
+                    路由映射
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1.1" data-path="../../../mvc/route/controller.html">
+            
+                <a href="../../../mvc/route/controller.html">
+            
+                    
+                    控制器类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.2" data-path="../../../mvc/route/action.html">
+            
+                <a href="../../../mvc/route/action.html">
+            
+                    
+                    路由方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.3" data-path="../../../mvc/route/rule/">
+            
+                <a href="../../../mvc/route/rule/">
+            
+                    
+                    路由映射规则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1.3.1" data-path="../../../mvc/route/rule/default.html">
+            
+                <a href="../../../mvc/route/rule/default.html">
+            
+                    
+                    默认规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.1.3.2" data-path="../../../mvc/route/rule/custom.html">
+            
+                <a href="../../../mvc/route/rule/custom.html">
+            
+                    
+                    自定义路由映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="../../../mvc/params/">
+            
+                <a href="../../../mvc/params/">
+            
+                    
+                    接口参数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.2.1" data-path="../../../mvc/params/simple.html">
+            
+                <a href="../../../mvc/params/simple.html">
+            
+                    
+                    简单参数类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2.2" data-path="../../../mvc/params/list.html">
+            
+                <a href="../../../mvc/params/list.html">
+            
+                    
+                    数组列表参数类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2.3" data-path="../../../mvc/params/object.html">
+            
+                <a href="../../../mvc/params/object.html">
+            
+                    
+                    对象参数类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2.4" data-path="../../../mvc/params/context.html">
+            
+                <a href="../../../mvc/params/context.html">
+            
+                    
+                    内置参数类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2.5" data-path="../../../mvc/params/mapping.html">
+            
+                <a href="../../../mvc/params/mapping.html">
+            
+                    
+                    映射规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2.6" data-path="../../../mvc/params/valid.html">
+            
+                <a href="../../../mvc/params/valid.html">
+            
+                    
+                    参数校验
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="../../../mvc/return/">
+            
+                <a href="../../../mvc/return/">
+            
+                    
+                    接口返回
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.3.1" data-path="../../../mvc/return/data.html">
+            
+                <a href="../../../mvc/return/data.html">
+            
+                    
+                    返回数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3.2" data-path="../../../mvc/return/data_json.html">
+            
+                <a href="../../../mvc/return/data_json.html">
+            
+                    
+                    返回数据序列化配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3.3" data-path="../../../mvc/return/def_view.html">
+            
+                <a href="../../../mvc/return/def_view.html">
+            
+                    
+                    返回默认视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3.4" data-path="../../../mvc/return/pointed_view.html">
+            
+                <a href="../../../mvc/return/pointed_view.html">
+            
+                    
+                    返回指定视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="../../../mvc/view.html">
+            
+                <a href="../../../mvc/view.html">
+            
+                    
+                    视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="../../../mvc/static.html">
+            
+                <a href="../../../mvc/static.html">
+            
+                    
+                    静态资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="../../../mvc/interceptor.html">
+            
+                <a href="../../../mvc/interceptor.html">
+            
+                    
+                    拦截器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.7" data-path="../../../mvc/theme.html">
+            
+                <a href="../../../mvc/theme.html">
+            
+                    
+                    多主题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    RESTful API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../../spec/">
+            
+                <a href="../../spec/">
+            
+                    
+                    API 规范
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1.1" data-path="../../spec/desc.html">
+            
+                <a href="../../spec/desc.html">
+            
+                    
+                    描述文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.1.2" data-path="../../spec/errors.html">
+            
+                <a href="../../spec/errors.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.1.3" data-path="../../spec/security.html">
+            
+                <a href="../../spec/security.html">
+            
+                    
+                    安全认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.1.4" data-path="../../spec/cors.html">
+            
+                <a href="../../spec/cors.html">
+            
+                    
+                    跨域资源共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.1.5" data-path="../../spec/jsonp.html">
+            
+                <a href="../../spec/jsonp.html">
+            
+                    
+                    JSONP 回调
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.1.6" data-path="../../spec/pagination.html">
+            
+                <a href="../../spec/pagination.html">
+            
+                    
+                    数据分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.1.7" data-path="../../spec/filtering.html">
+            
+                <a href="../../spec/filtering.html">
+            
+                    
+                    数据过滤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.1.8" data-path="../../spec/sorting.html">
+            
+                <a href="../../spec/sorting.html">
+            
+                    
+                    数据排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.1.9" data-path="../../spec/select.html">
+            
+                <a href="../../spec/select.html">
+            
+                    
+                    字段选择
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.1.10" data-path="../../spec/expand.html">
+            
+                <a href="../../spec/expand.html">
+            
+                    
+                    数据展开
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../../config.html">
+            
+                <a href="../../config.html">
+            
+                    
+                    API 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../../basic.html">
+            
+                <a href="../../basic.html">
+            
+                    
+                    基础 API 开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../../data/">
+            
+                <a href="../../data/">
+            
+                    
+                    数据 API 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.4.1" data-path="../../data/query/">
+            
+                <a href="../../data/query/">
+            
+                    
+                    实体查询
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.4.1.1" data-path="../../data/query/filters.html">
+            
+                <a href="../../data/query/filters.html">
+            
+                    
+                    使用 filters 参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4.1.2" data-path="../../data/query/orderby.html">
+            
+                <a href="../../data/query/orderby.html">
+            
+                    
+                    使用 orderby 参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4.1.3" data-path="../../data/query/expand.html">
+            
+                <a href="../../data/query/expand.html">
+            
+                    
+                    使用 expand 参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4.1.4" data-path="../../data/query/joins.html">
+            
+                <a href="../../data/query/joins.html">
+            
+                    
+                    使用 joins 参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4.2" data-path="../../data/delete.html">
+            
+                <a href="../../data/delete.html">
+            
+                    
+                    实体删除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4.3" data-path="../../data/partial.html">
+            
+                <a href="../../data/partial.html">
+            
+                    
+                    实体操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.5" data-path="../../exception.html">
+            
+                <a href="../../exception.html">
+            
+                    
+                    错误处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6" data-path="../../doc/">
+            
+                <a href="../../doc/">
+            
+                    
+                    生成文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.6.1" data-path="../../doc/conf.html">
+            
+                <a href="../../doc/conf.html">
+            
+                    
+                    基于配置生成文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6.2" data-path="../../doc/annotation.html">
+            
+                <a href="../../doc/annotation.html">
+            
+                    
+                    基于注解编写文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6.3" data-path="../../doc/md.html">
+            
+                <a href="../../doc/md.html">
+            
+                    
+                    基于 Markdown 编写文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.6.3.1" data-path="../../doc/md/file.html">
+            
+                <a href="../../doc/md/file.html">
+            
+                    
+                    注解引用文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6.3.2" data-path="../../doc/md/fragment.html">
+            
+                <a href="../../doc/md/fragment.html">
+            
+                    
+                    注解引用文件片段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6.3.3" data-path="../../doc/md/auto.html">
+            
+                <a href="../../doc/md/auto.html">
+            
+                    
+                    自动映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6.4" data-path="../../doc/global.html">
+            
+                <a href="../../doc/global.html">
+            
+                    
+                    编写全局文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6.5" data-path="../../doc/extend/">
+            
+                <a href="../../doc/extend/">
+            
+                    
+                    扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.6.5.1" data-path="../../doc/extend/time.html">
+            
+                <a href="../../doc/extend/time.html">
+            
+                    
+                    使用时间类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6.5.2" data-path="../../doc/extend/able.html">
+            
+                <a href="../../doc/extend/able.html">
+            
+                    
+                    实体字段的操作控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.6.5.3" data-path="../../doc/extend/cors.html">
+            
+                <a href="../../doc/extend/cors.html">
+            
+                    
+                    路由 CORS 控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.7" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    生成接口
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.7.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Restd 配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="7.1.7.1.1" data-path="enable.html">
+            
+                <a href="enable.html">
+            
+                    
+                    启用 Restd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.7.1.2" data-path="entity.html">
+            
+                <a href="entity.html">
+            
+                    
+                    配置实体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.7.1.3" data-path="action.html">
+            
+                <a href="action.html">
+            
+                    
+                    配置实体接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.7.1.4" data-path="sql.html">
+            
+                <a href="sql.html">
+            
+                    
+                    配置 SQL 接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.7.2" data-path="../security.html">
+            
+                <a href="../security.html">
+            
+                    
+                    Restd 安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../../../htpl/">
+            
+                <a href="../../../htpl/">
+            
+                    
+                    HTPL 视图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../../../htpl/expr/">
+            
+                <a href="../../../htpl/expr/">
+            
+                    
+                    表达式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1.1" data-path="../../../htpl/expr/expr.html">
+            
+                <a href="../../../htpl/expr/expr.html">
+            
+                    
+                    使用 ${} 解析表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.1.2" data-path="../../../htpl/expr/url.html">
+            
+                <a href="../../../htpl/expr/url.html">
+            
+                    
+                    使用 @{} 处理路径上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.1.3" data-path="../../../htpl/expr/escape.html">
+            
+                <a href="../../../htpl/expr/escape.html">
+            
+                    
+                    转义处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2" data-path="../../../htpl/syntax/">
+            
+                <a href="../../../htpl/syntax/">
+            
+                    
+                    HTPL 语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.2.1" data-path="../../../htpl/syntax/comment_base.html">
+            
+                <a href="../../../htpl/syntax/comment_base.html">
+            
+                    
+                    基于注释的 HTPL 语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2.2" data-path="../../../htpl/syntax/set.html">
+            
+                <a href="../../../htpl/syntax/set.html">
+            
+                    
+                    设置变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2.3" data-path="../../../htpl/syntax/logic.html">
+            
+                <a href="../../../htpl/syntax/logic.html">
+            
+                    
+                    逻辑控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2.4" data-path="../../../htpl/syntax/ref.html">
+            
+                <a href="../../../htpl/syntax/ref.html">
+            
+                    
+                    模板引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2.5" data-path="../../../htpl/syntax/layout.html">
+            
+                <a href="../../../htpl/syntax/layout.html">
+            
+                    
+                    页面布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.2.6" data-path="../../../htpl/syntax/bundle.html">
+            
+                <a href="../../../htpl/syntax/bundle.html">
+            
+                    
+                    合并资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3" data-path="../../../htpl/attr/">
+            
+                <a href="../../../htpl/attr/">
+            
+                    
+                    HTPL 属性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.3.1" data-path="../../../htpl/attr/equals.html">
+            
+                <a href="../../../htpl/attr/equals.html">
+            
+                    
+                    等效语法属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.3.2" data-path="../../../htpl/attr/enhance.html">
+            
+                <a href="../../../htpl/attr/enhance.html">
+            
+                    
+                    增强语法属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.4" data-path="../../../htpl/fingerprint.html">
+            
+                <a href="../../../htpl/fingerprint.html">
+            
+                    
+                    资源文件指纹
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.1.5" data-path="../../../htpl/with_jsp.html">
+            
+                <a href="../../../htpl/with_jsp.html">
+            
+                    
+                    与 JSP 混合使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../../../security/">
+            
+                <a href="../../../security/">
+            
+                    
+                    安全控制
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../../../security/server.html">
+            
+                <a href="../../../security/server.html">
+            
+                    
+                    接入授权服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.2" data-path="../../../security/debug.html">
+            
+                <a href="../../../security/debug.html">
+            
+                    
+                    本地开发调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.3" data-path="../../../security/userinfo.html">
+            
+                <a href="../../../security/userinfo.html">
+            
+                    
+                    获取用户信息
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.3.1" data-path="../../../security/userdetails.html">
+            
+                <a href="../../../security/userdetails.html">
+            
+                    
+                    获取用户详细信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.4" data-path="../../../security/anonymous.html">
+            
+                <a href="../../../security/anonymous.html">
+            
+                    
+                    设置匿名访问
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.5" data-path="../../../security/op_perm.html">
+            
+                <a href="../../../security/op_perm.html">
+            
+                    
+                    操作权限控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.6" data-path="../../../security/data_perm.html">
+            
+                <a href="../../../security/data_perm.html">
+            
+                    
+                    数据权限控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.1.7" data-path="../../../security/op_log.html">
+            
+                <a href="../../../security/op_log.html">
+            
+                    
+                    生成操作日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../../../unit_test/">
+            
+                <a href="../../../unit_test/">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../../../unit_test/config.html">
+            
+                <a href="../../../unit_test/config.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../../../unit_test/class_test.html">
+            
+                <a href="../../../unit_test/class_test.html">
+            
+                    
+                    针对类的单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../../../unit_test/web_test.html">
+            
+                <a href="../../../unit_test/web_test.html">
+            
+                    
+                    针对 web 接口的单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../../../FAQ.html">
+            
+                <a href="../../../FAQ.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+<div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x542F;&#x7528;-restd"><b> </b>&#x542F;&#x7528; Restd</a></li><ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;"><b>1. </b>&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x6548;&#x679C;"><b>2. </b>&#x6548;&#x679C;</a></li></ul></ul></div><a href="#&#x542F;&#x7528;-restd" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x542F;&#x7528;-restd"><a name="&#x542F;&#x7528;-restd" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x7528;-restd"><i class="fa fa-link" aria-hidden="true"></i></a> &#x542F;&#x7528; Restd</h1>
+<h2 id="&#x914D;&#x7F6E;"><a name="&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x914D;&#x7F6E;</h2>
+<p>&#x5728;&#x6211;&#x4EEC; API &#x6A21;&#x5757;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-xml"><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>apis</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>http://www.leapframework.org/schema/webapi<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>api</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>restd<span class="token punctuation">&quot;</span></span> <span class="token attr-name">base-path</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/<span class="token punctuation">&quot;</span></span> <span class="token attr-name">restd-enabled</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>api</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>apis</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p><strong>&#x542F;&#x7528; Restd &#x53EA;&#x9700;&#x8981;&#x5C06; API &#x914D;&#x7F6E;&#x4E2D; api &#x5143;&#x7D20;&#x7684; restd-enabled &#x7F6E;&#x4E3A; true &#x5373;&#x53EF;</strong>&#x3002;</p>
+<h2 id="&#x6548;&#x679C;"><a name="&#x6548;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x6548;&#x679C;</h2>
+<p>&#x542F;&#x7528;&#x540E;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x6211;&#x4EEC;&#x4E3A;&#x6240;&#x6709;&#x5B9E;&#x4F53;&#x5404;&#x81EA;&#x521B;&#x5EFA;&#x4E86;&#x8FD9;&#x6837;&#x4E00;&#x4E2A; API Controller &#xFF08;&#x8FD9;&#x91CC;&#x4EE5; User &#x5B9E;&#x4F53;&#x4E3A;&#x4F8B;&#xFF09;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@Path</span><span class="token punctuation">(</span><span class="token string">&quot;/user&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token keyword">extends</span> <span class="token class-name">ModelController</span><span class="token operator">&lt;</span>User<span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@GET</span>
+    <span class="token keyword">public</span> ApiResponse<span class="token operator">&lt;</span>List<span class="token operator">&lt;</span>User<span class="token operator">&gt;&gt;</span> <span class="token function">query</span><span class="token punctuation">(</span>QueryOptions options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">queryList</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@GET</span><span class="token punctuation">(</span><span class="token string">&quot;/{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> ApiResponse<span class="token operator">&lt;</span>User<span class="token operator">&gt;</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathParam</span> Object id<span class="token punctuation">,</span> QueryOptionsBase options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">get</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@POST</span>
+    <span class="token keyword">public</span> ApiResponse <span class="token function">create</span><span class="token punctuation">(</span>Partial<span class="token operator">&lt;</span>User<span class="token operator">&gt;</span> partial<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">createAndReturn</span><span class="token punctuation">(</span>partial<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@DELETE</span><span class="token punctuation">(</span><span class="token string">&quot;/{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> ApiResponse <span class="token function">delete</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathParam</span> Object id<span class="token punctuation">,</span> DeleteOptions options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">delete</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@PATCH</span><span class="token punctuation">(</span><span class="token string">&quot;/{id}&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> ApiResponse <span class="token function">update</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathParam</span> Object id<span class="token punctuation">,</span> Partial<span class="token operator">&lt;</span>User<span class="token operator">&gt;</span> partial<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">updatePartial</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> partial<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<div class="ex-page-foot">
+    <div class="ex-page-jump">
+        
+        <span class="ex-jump-prev" style="display: block;">上一篇：<a href="./">Restd 配置</a></span>
+        
+        
+        <span class="ex-jump-next">下一篇：<a href="entity.html">配置实体</a></span>
+        
+    </div>
+</div>
+
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"启用 Restd","level":"7.1.7.1.1","depth":4,"next":{"title":"配置实体","level":"7.1.7.1.2","depth":4,"path":"api/restd/conf/entity.md","ref":"api/restd/conf/entity.md","articles":[]},"previous":{"title":"Restd 配置","level":"7.1.7.1","depth":3,"path":"api/restd/conf/README.md","ref":"api/restd/conf/README.md","articles":[{"title":"启用 Restd","level":"7.1.7.1.1","depth":4,"path":"api/restd/conf/enable.md","ref":"api/restd/conf/enable.md","articles":[]},{"title":"配置实体","level":"7.1.7.1.2","depth":4,"path":"api/restd/conf/entity.md","ref":"api/restd/conf/entity.md","articles":[]},{"title":"配置实体接口","level":"7.1.7.1.3","depth":4,"path":"api/restd/conf/action.md","ref":"api/restd/conf/action.md","articles":[]},{"title":"配置 SQL 接口","level":"7.1.7.1.4","depth":4,"path":"api/restd/conf/sql.md","ref":"api/restd/conf/sql.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-highlight","prism","terminal","include-codeblock","cuav-chapters","ace","anchor-navigation-ex","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"prism":{},"ace":{},"livereload":{},"search":{},"cuav-chapters":{"summaryMaxSize":20,"useLimitExpanded":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":false,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showLevel":true},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"terminal":{"copyButtons":false,"fade":false,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"leap":{"version":"0.6.2b"}},"title":"Leap 框架官方开发文档","gitbook":"*"},"file":{"path":"api/restd/conf/enable.md","mtime":"2017-08-10T03:20:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-08-10T06:51:11.718Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-cuav-chapters/cuav-chapters.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

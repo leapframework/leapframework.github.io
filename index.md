@@ -13,7 +13,7 @@ leap是一个全栈式的web应用开发框架，高效便捷，上手简单，�
 <dependency>
     <groupId>org.leapframework</groupId>
     <artifactId>leap</artifactId>
-    <version>[0.6.3b,]</version>
+    <version>[0.6.4b,]</version>
     <type>pom</type>
 </dependency>
 ```

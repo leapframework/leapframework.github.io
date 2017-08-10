@@ -9,7 +9,7 @@ title: leap版本历史
 <dependency>
     <groupId>org.leapframework</groupId>
     <artifactId>leap</artifactId>
-    <version>0.6.4b-SNAPSHOT</version>
+    <version>0.6.5b-SNAPSHOT</version>
     <type>pom</type>
 </dependency>
 ```
@@ -20,12 +20,21 @@ title: leap版本历史
 <dependency>
     <groupId>org.leapframework</groupId>
     <artifactId>leap</artifactId>
-    <version>0.6.3b</version>
+    <version>0.6.4b</version>
     <type>pom</type>
 </dependency>
 ```
 
 ## 历史版本
+
+```xml
+<dependency>
+    <groupId>org.leapframework</groupId>
+    <artifactId>leap</artifactId>
+    <version>0.6.0b</version>
+    <type>pom</type>
+</dependency>
+```
 
 ```xml
 <dependency>
